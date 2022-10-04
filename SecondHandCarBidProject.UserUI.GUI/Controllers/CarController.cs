@@ -13,5 +13,10 @@ namespace SecondHandCarBidProject.UserUI.GUI.Controllers
         {
             return View();
         }
+
+        public ActionResult CarDetailInformation()
+        {
+            return View();
+        }
     }
 }
