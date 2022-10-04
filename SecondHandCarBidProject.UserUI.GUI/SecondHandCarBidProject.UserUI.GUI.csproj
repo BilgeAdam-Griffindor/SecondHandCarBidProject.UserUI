@@ -127,9 +127,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\customJs\193.9f82dc70.chunk.js" />
-    <Content Include="Content\customJs\2.bacc7828.chunk.js" />
-    <Content Include="Content\customJs\47.94202493.chunk.js" />
+    <Content Include="Scripts\customJs\193.9f82dc70.chunk.js" />
+    <Content Include="Scripts\customJs\2.bacc7828.chunk.js" />
+    <Content Include="Scripts\customJs\47.94202493.chunk.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -152,10 +152,10 @@
     <Content Include="Content\css\9.dfaeeccb.chunk.css" />
     <Content Include="Content\css\login.css" />
     <Content Include="Content\css\main.e3b73339.chunk.css" />
-    <Content Include="Content\customJs\5.7c737490.chunk.js" />
-    <Content Include="Content\customJs\9.2b67ddc6.chunk.js" />
-    <Content Include="Content\customJs\login.js" />
-    <Content Include="Content\customJs\main.0d39ce71.chunk.js" />
+    <Content Include="Scripts\customJs\5.7c737490.chunk.js" />
+    <Content Include="Scripts\customJs\9.2b67ddc6.chunk.js" />
+    <Content Include="Scripts\customJs\login.js" />
+    <Content Include="Scripts\customJs\main.0d39ce71.chunk.js" />
     <Content Include="Content\images\MazakaPngLogo.039d2be1.png" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
