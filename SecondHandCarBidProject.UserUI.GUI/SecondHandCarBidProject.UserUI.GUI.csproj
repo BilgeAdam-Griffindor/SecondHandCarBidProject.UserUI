@@ -176,10 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiServices\Concrete\BaseApi.cs" />
-    <Compile Include="ApiServices\Concrete\BaseApiReturn.cs" />
-    <Compile Include="ApiServices\Concrete\BaseApiV2.cs" />
     <Compile Include="ApiServices\Interface\IBaseApi.cs" />
-    <Compile Include="ApiServices\Interface\IBaseApiV2.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BidController.cs" />
     <Compile Include="Controllers\CarController.cs" />
