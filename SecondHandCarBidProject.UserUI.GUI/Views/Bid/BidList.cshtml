@@ -100,10 +100,12 @@
                                     @item
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" value="Güncelle">Güncelle</button>
+                                    @Html.ActionLink("Güncelle","UpdateBid",null,new { @class = "btn btn-primary")
+                                    
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-danger" value="Sil">Sil</button>
+                                    @Html.ActionLink("Sil","DeleteBid",null,new { @class = "btn btn-danger")
+                                   
                                 </td>
                             </tr>
                         }
