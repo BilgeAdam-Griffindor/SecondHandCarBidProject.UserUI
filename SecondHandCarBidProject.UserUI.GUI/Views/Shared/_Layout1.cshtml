@@ -4,12 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewBag.Title</title>
-
-    <link href="~/Content/css/BidList.css" rel="stylesheet" />
-    <link href="~/Content/css/BidListTable.css" rel="stylesheet" />
+    @RenderSection("Stylesheets")
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/Site.css" rel="stylesheet"/>
-    <link herf="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/06b5e4837b.js" crossorigin="anonymous"></script>
 
     <style>
@@ -21,12 +19,13 @@
         #discount:hover {
             background-color: black;
         }
-        #copyrightText{
-            font-size:0.8rem;
+
+        #copyrightText {
+            font-size: 0.8rem;
         }
 
-        #sidebar{
-            min-width:250px;
+        #sidebar {
+            min-width: 250px;
         }
     </style>
 </head>
