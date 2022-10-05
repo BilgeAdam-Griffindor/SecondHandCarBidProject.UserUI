@@ -1,36 +1,42 @@
-﻿
+﻿@using SecondHandCarBidProject.UserUI.Dto.DTOs
+@model BidListDTO
 @{
     ViewBag.Title = "BidList";
     Layout = "~/Views/Shared/_Layout1.cshtml";
     var GelenListe = (List<string>)ViewBag.Liste;
 }
 
+@section Stylesheets {
+    <link href="~/Content/css/BidList.css" rel="stylesheet" />
+    <link href="~/Content/css/BidListTable.css" rel="stylesheet" />
+}
+
 @using (Html.BeginForm("BidList", "Bid", FormMethod.Post))
 {
-    <div class="container px-4" style="margin-top:50px;">
+    <div class="container px-0" style="margin-top:50px;">
         <h5>Kriterler</h5>
         <div class="row gx-5">
             <div class="col">
                 <label>İhale Adı :</label>
-                <input type="text" class="form-control">
+                @Html.TextBoxFor(x => x.BidName, new {@class="form-control"})               
             </div>
             <div class="col">
                 <label>Bireysel/Kurumsal :</label>
-                @Html.DropDownList("Bireysel/Kurumsal", new List<SelectListItem> { new SelectListItem { Text = "Bireysel", Value = "1" }, new SelectListItem { Text = "Kurumsal", Value = "2" } }, htmlAttributes: new { @class = "form-select" })
+                @Html.DropDownListFor(x=>x.UserTypeID, Model.UserType, htmlAttributes: new { @class = "form-select" }) 
             </div>
             <div class="col">
                 <label>Statü :</label>
-                @Html.DropDownList("Statü", new List<SelectListItem> { new SelectListItem { Text = "Statü 1", Value = "1" }, new SelectListItem { Text = "Statü 2", Value = "2" } }, htmlAttributes: new { @class = "form-select" })
+                @Html.DropDownListFor(x => x.StatusID, Model.Status, htmlAttributes: new { @class = "form-select" })
             </div>
         </div>
-        <div class="row gx-5 " style="margin-top:50px;width:100px;height:30px;float:right">
+        <div class="row gx-2 " style="margin-top:50px;width:100px;height:30px;float:right">
             <input type="submit" style="" value="Listele" />
         </div>
-        <div class="row gx-5" style="margin-top: 100px">
+        <div class="row gx-5" style="margin-top: 100px;">
             <h5>İhale Listesi</h5>
             @if (GelenListe.Count > 0)
             {
-                <table class="table table-striped mb-0">
+                <table style="width: 100px;" class="table table-striped mb-0">
                     <thead style="background-color: #002d72;">
                         <tr>
                             <th scope="col">
@@ -58,10 +64,10 @@
                                 Kaydetme Zamanı
                             </th>
                             <th scope="col">
-                                Güncelle
+                               
                             </th>
                             <th scope="col">
-                                Sil
+                                
                             </th>
                         </tr>
                     </thead>
@@ -94,7 +100,7 @@
                                     @item
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-primary"  value="Güncelle">Güncelle</button>
+                                    <button type="button" class="btn btn-primary" value="Güncelle">Güncelle</button>
                                 </td>
                                 <td>
                                     <button type="button" class="btn btn-danger" value="Sil">Sil</button>
@@ -114,4 +120,3 @@
         </div>
     </div>
 }
-       
