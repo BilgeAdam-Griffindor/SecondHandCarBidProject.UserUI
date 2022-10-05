@@ -180,6 +180,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BidController.cs" />
     <Compile Include="Controllers\CarController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -220,6 +221,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Car\CarDetailInformation.cshtml" />
     <Content Include="Views\Bid\BidList.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -230,6 +232,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\CustomErrorHandle\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SecondHandCarBidProject.UserUI.Dto\SecondHandCarBidProject.UserUI.Dto.csproj">
