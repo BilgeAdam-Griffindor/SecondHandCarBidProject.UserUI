@@ -11,11 +11,136 @@
     <link href="~/Content/Site.css" rel="stylesheet"/>
     <link herf="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/06b5e4837b.js" crossorigin="anonymous"></script>
+
+    <style>
+        .nav-link {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 200;
+        }
+
+        #discount:hover {
+            background-color: black;
+        }
+        #copyrightText{
+            font-size:0.8rem;
+        }
+
+        #sidebar{
+            min-width:250px;
+        }
+    </style>
 </head>
-<body style="background-color:#f4f5f7">
+<body>
+    <!--TODO Responsiveness issues-->
+    <div class="container-fluid">
+        <div class="row mb-5">
+            <!--Left Side Navigation-->
+            <div id="sidebar" class="col-12 col-sm-2 col-md-2 pt-5">
+                <!--Logo-->
+                <div class="row mt-5">
+                    <div class="col-sm-12 d-flex justify-content-center">
+                        <img class="img-fluid" src="" alt="Gryffindor" />
+                    </div>
+                </div>
 
-    @RenderBody()
+                <!--Menu Navigation-->
+                <div class="row mt-5 pt-5">
+                    <div class="col-sm-12 ms-5">
+                        <ul class="nav nav-pills flex-column navbar-dark">
+                            <li class="nav-item">
+                                <a class="nav-link fs-6 text-dark link-warning" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-6 text-dark link-warning " href="#">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-6 text-dark link-warning " href="#">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-6 text-dark link-warning " href="#">Cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-6 text-dark link-warning " href="#">Checkout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
+                <!--Discount Button-->
+                <div class="row mt-5 ms-5">
+                    <a id="discount" class="btn btn-warning text-white fs-4 col-sm-9" href="#">%Discount%</a>
+                </div>
+
+                <!--New This Week Button-->
+                <div class="row mt-2 ms-5">
+                    <a id="discount" class="btn bg-dark text-white fs-5 col-sm-9" href="#">New This Week</a>
+                </div>
+
+                <!--Cart Favourite Search-->
+                <div class="row mt-5 pt-5">
+                    <div class="col-sm-12 ms-5">
+                        <ul class="nav nav-pills flex-column navbar-dark">
+                            <li class="nav-item">
+                                <span class="nav-link text-dark">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <a class="link-warning text-dark fs-5 fw-bold text-decoration-none" href="#">Cart</a>
+                                </span>
+
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link text-dark">
+                                    <i class="fa-solid fa-star"></i>
+                                    <a class="link-warning text-dark fs-5 fw-bold text-decoration-none" href="#">Favourite</a>
+                                </span>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link text-dark">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <a class="link-warning text-dark fs-5 fw-bold text-decoration-none" href="#">Search</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Main Content-->
+            <div class="col-12 col-sm-10 col-md-10">
+                @RenderBody()
+            </div>
+        </div>
+
+        <div class="row bg-dark p-5 d-flex justify-content-center">
+            <div class="col-12 col-sm-12 col-md-3 p-5">
+                <img class="img-fluid" src="" alt="Gryffindor" /><br />
+                <span id="copyrightText" class="text-muted">
+                    Copyright &copy;2022
+                </span>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 p-5">
+                <ul class="navbar navbar-dark">
+                    <li class="nav-item">
+                        <a class="nav-link fs-6 text-white link-warning" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6 text-white link-warning " href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6 text-white link-warning " href="#">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6 text-white link-warning " href="#">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6 text-white link-warning " href="#">Checkout</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
 
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/jquery-3.6.0.min.js"></script>
