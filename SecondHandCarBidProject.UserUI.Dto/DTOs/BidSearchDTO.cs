@@ -3,7 +3,7 @@ using System.Web.Mvc;
 
 namespace SecondHandCarBidProject.UserUI.Dto.DTOs
 {
-    public class BidListDTO
+    public class BidSearchDTO
     {
         public string BidName { get; set; }
         public int UserTypeID { get; set; }
