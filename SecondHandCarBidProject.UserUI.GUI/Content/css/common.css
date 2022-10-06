@@ -1,0 +1,20 @@
+﻿/*.nav-link {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 200;
+            }
+
+            #discount:hover {
+                background-color: black;
+            }
+
+            #copyrightText {
+                font-size: 0.8rem;
+            }
+
+            #sidebar {
+                min-width: 250px;
+            }*/
+
+.layoutFooter-bg {
+    background-color: #555555;
+}
