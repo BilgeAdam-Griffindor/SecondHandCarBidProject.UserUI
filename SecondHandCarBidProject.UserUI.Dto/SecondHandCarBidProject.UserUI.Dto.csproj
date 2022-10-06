@@ -63,7 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CarDetailDto.cs" />
-    <Compile Include="DTOs\BidListDTO.cs" />
+    <Compile Include="DTOs\BidDTO.cs" />
+    <Compile Include="DTOs\BidSearchDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

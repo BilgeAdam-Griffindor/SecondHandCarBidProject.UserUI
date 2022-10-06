@@ -1,9 +1,9 @@
 ﻿@using SecondHandCarBidProject.UserUI.Dto.DTOs
-@model BidListDTO
+@model BidSearchDTO
 @{
     ViewBag.Title = "BidList";
     Layout = "~/Views/Shared/_Layout1.cshtml";
-    var GelenListe = (List<string>)ViewBag.Liste;
+    var GelenListe = (List<BidDTO>)ViewBag.Liste;
 }
 
 @section Stylesheets {
@@ -29,7 +29,7 @@
                 @Html.DropDownListFor(x => x.StatusID, Model.Status, htmlAttributes: new { @class = "form-select" })
             </div>
         </div>
-        <div class="row gx-2 " style="margin-top:50px;width:100px;height:30px;float:right">
+        <div class="row gx-2 " style="margin-top: 50px; width: 100px; height: 30px; position: relative; left: 82%">
             <input type="submit" style="" value="Listele" />
         </div>
         <div class="row gx-5" style="margin-top: 100px;">
@@ -76,28 +76,28 @@
                         {
                             <tr>
                                 <td>
-                                    @item
+                                    @item.BidID
                                 </td>
                                 <td>
-                                    @item
+                                    @item.BidName
                                 </td>
                                 <td>
-                                    @item
+                                    @item.BidUserType
                                 </td>
                                 <td>
-                                    @item
+                                    @item.BidStartDate
                                 </td>
                                 <td>
-                                    @item
+                                    @item.BidEndDate
                                 </td>
                                 <td>
-                                    @item
+                                    @item.Statu
                                 </td>
                                 <td>
-                                    @item
+                                    @item.User
                                 </td>
                                 <td>
-                                    @item
+                                    @item.BidCreatedDate
                                 </td>
                                 <td>
                                     @Html.ActionLink("Güncelle","UpdateBid",null,new { @class = "btn btn-primary" })
@@ -117,7 +117,7 @@
                 <h2>bulunamadı</h2>
             }
         </div>
-        <div class="row gx-5 " style="margin-top:50px;width:100px;height:30px;float:right">
+        <div class="row gx-1 " style="margin-top:40px;width:100px;height:30px;position:relative;left:72%">
             <button type="button" style="color:black" value="Yeni">Yeni</button>
         </div>
     </div>
