@@ -8,7 +8,7 @@ namespace SecondHandCarBidProject.UserUI.GUI.Controllers
 {
     public class ErrorController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Error()
         {
             return View();
         }
