@@ -127,6 +127,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\customJs\193.9f82dc70.chunk.js" />
+    <Content Include="Scripts\customJs\2.bacc7828.chunk.js" />
+    <Content Include="Scripts\customJs\47.94202493.chunk.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -143,7 +146,21 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+
+    <Content Include="Content\css\193.4f3c47de.chunk.css" />
+    <Content Include="Content\css\47.413e1e04.chunk.css" />
+    <Content Include="Content\css\5.d8c2ab68.chunk.css" />
+    <Content Include="Content\css\9.dfaeeccb.chunk.css" />
+    <Content Include="Content\css\login.css" />
+    <Content Include="Content\css\main.e3b73339.chunk.css" />
+    <Content Include="Scripts\customJs\5.7c737490.chunk.js" />
+    <Content Include="Scripts\customJs\9.2b67ddc6.chunk.js" />
+    <Content Include="Scripts\customJs\login.js" />
+    <Content Include="Scripts\customJs\main.0d39ce71.chunk.js" />
+    <Content Include="Content\images\MazakaPngLogo.039d2be1.png" />
+
     <Content Include="Content\Site.css" />
+
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -201,8 +218,13 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
+
+    <Content Include="Views\Default\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Car\CarDetailInformation.cshtml" />
+
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
