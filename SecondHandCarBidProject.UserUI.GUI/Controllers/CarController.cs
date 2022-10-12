@@ -15,8 +15,8 @@ namespace SecondHandCarBidProject.UserUI.GUI.Controllers
 {
     public class CarController : Controller
     {
+        //[ValidateAntiForgeryToken]
         [HttpGet]
-        [ValidateAntiForgeryToken]
         public ActionResult Index()
         {
             CarListViewModel model = new CarListViewModel();

@@ -288,12 +288,14 @@
     <Compile Include="ApiServices\Interface\IBaseApi.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BidController.cs" />
+    <Compile Include="Controllers\CarBuyController.cs" />
     <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CarBuyAddViewModel.cs" />
     <Compile Include="Models\CarListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\AESAlgorithm.cs" />
@@ -369,6 +371,7 @@
     <Content Include="TemplateFiles\scss\_theme_color.scss" />
     <Content Include="TemplateFiles\scss\_variables.scss" />
     <Content Include="Views\Car\Index.cshtml" />
+    <Content Include="Views\CarBuy\Add.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
