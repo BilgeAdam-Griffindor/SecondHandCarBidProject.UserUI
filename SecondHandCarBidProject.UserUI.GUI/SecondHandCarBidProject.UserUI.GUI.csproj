@@ -236,6 +236,24 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CorporatePackageTypeAddViewModels.cs" />
+    <Compile Include="ViewModels\CorporatePackageTypeUpdateViewModels.cs" />
+    <Compile Include="ViewModels\CorporationAddViewModels.cs" />
+    <Compile Include="ViewModels\CorporationTypeAddViewModels.cs" />
+    <Compile Include="ViewModels\CorporationTypeUpdateViewModels.cs" />
+    <Compile Include="ViewModels\CorporationUpdateViewModels.cs" />
+    <Compile Include="ViewModels\CorporationUserAddViewModels.cs" />
+    <Compile Include="ViewModels\CorporationUserUpdateViewModels.cs" />
+    <Compile Include="ViewModels\ExpertInfoAddViewModels.cs" />
+    <Compile Include="ViewModels\ExpertInfoUpdateViewModels.cs" />
+    <Compile Include="ViewModels\FavoriteUserSearchesAddViewModels.cs" />
+    <Compile Include="ViewModels\FavoriteUserSearchesUpdateViewModels.cs" />
+    <Compile Include="ViewModels\NotaryFeeAddViewModels.cs" />
+    <Compile Include="ViewModels\NotaryFeeUpdateViewModels.cs" />
+    <Compile Include="ViewModels\NotificationMessageAddViewModels.cs" />
+    <Compile Include="ViewModels\NotificationMessageUpdateViewModels.cs" />
+    <Compile Include="ViewModels\NotificationMessageUserAddViewModels.cs" />
+    <Compile Include="ViewModels\NotificationMessageUserUpdateViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
