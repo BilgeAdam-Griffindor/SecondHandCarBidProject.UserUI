@@ -1,0 +1,124 @@
+﻿@using SecondHandCarBidProject.UserUI.Dto.DTOs
+@model BidSearchDTO
+@{
+    ViewBag.Title = "BidList";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+    var GelenListe = (List<BidDTO>)ViewBag.Liste;
+}
+
+@section Stylesheets {
+    <link href="~/Content/css/BidList.css" rel="stylesheet" />
+    <link href="~/Content/css/BidListTable.css" rel="stylesheet" />
+}
+
+@using (Html.BeginForm("BidList", "Bid", FormMethod.Post))
+{
+    <div class="container px-0" style="margin-top:50px;">
+        <h5>Kriterler</h5>
+        <div class="row gx-5">
+            <div class="col">
+                <label>İhale Adı :</label>
+                @Html.TextBoxFor(x => x.BidName, new {@class="form-control"})               
+            </div>
+            <div class="col">
+                <label>Bireysel/Kurumsal :</label>
+                @Html.DropDownListFor(x=>x.UserTypeID, Model.UserType, htmlAttributes: new { @class = "form-select" }) 
+            </div>
+            <div class="col">
+                <label>Statü :</label>
+                @Html.DropDownListFor(x => x.StatusID, Model.Status, htmlAttributes: new { @class = "form-select" })
+            </div>
+        </div>
+        <div class="row gx-2 " style="margin-top: 50px; width: 100px; height: 30px; position: relative; left: 82%">
+            <input type="submit" style="" value="Listele" />
+        </div>
+        <div class="row gx-5" style="margin-top: 100px;">
+            <h5>İhale Listesi</h5>
+            @if (GelenListe.Count > 0)
+            {
+                <table style="width: 100px;" class="table table-striped mb-0">
+                    <thead style="background-color: #002d72;">
+                        <tr>
+                            <th scope="col">
+                                İhale id
+                            </th>
+                            <th scope="col">
+                                İhale Adı
+                            </th>
+                            <th scope="col">
+                                Bireysel/Kurumsal
+                            </th>
+                            <th scope="col">
+                                İhale Başlangıç
+                            </th>
+                            <th scope="col">
+                                İhale Bitiş
+                            </th>
+                            <th scope="col">
+                                Statü
+                            </th>
+                            <th scope="col">
+                                Kaydeden Kul
+                            </th>
+                            <th scope="col">
+                                Kaydetme Zamanı
+                            </th>
+                            <th scope="col">
+                               
+                            </th>
+                            <th scope="col">
+                                
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in GelenListe)
+                        {
+                            <tr>
+                                <td>
+                                    @item.BidID
+                                </td>
+                                <td>
+                                    @item.BidName
+                                </td>
+                                <td>
+                                    @item.BidUserType
+                                </td>
+                                <td>
+                                    @item.BidStartDate
+                                </td>
+                                <td>
+                                    @item.BidEndDate
+                                </td>
+                                <td>
+                                    @item.Statu
+                                </td>
+                                <td>
+                                    @item.User
+                                </td>
+                                <td>
+                                    @item.BidCreatedDate
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Güncelle","UpdateBid",null,new { @class = "btn btn-primary" })
+                                    
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Sil","DeleteBid",null,new { @class = "btn btn-danger" })
+                                   
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <h2>bulunamadı</h2>
+            }
+        </div>
+        <div class="row gx-1 " style="margin-top:40px;width:100px;height:30px;position:relative;left:72%">
+            <button type="button" style="color:black" value="Yeni">Yeni</button>
+        </div>
+    </div>
+}

@@ -32,6 +32,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\SecondHandCarBidProject.UserUI.GUI.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,9 +44,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DnsClient, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.6.1\lib\net471\DnsClient.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.17.1\lib\net472\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.17.1\lib\net472\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.17.1\lib\net472\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Libmongocrypt, Version=1.5.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Libmongocrypt.1.5.5\lib\net472\MongoDB.Libmongocrypt.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress, Version=0.30.1.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpCompress.0.30.1\lib\net461\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -53,15 +78,33 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
@@ -82,6 +125,12 @@
       <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -127,6 +176,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\BidList.css" />
+    <Content Include="Content\css\BidListTable.css" />
+    <Content Include="Content\css\common.css" />
+    <Content Include="Content\images\GryffindorLogoWhite.png" />
+    <Content Include="Content\images\GryffindorLogo.png" />
+    <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
+    <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
+    <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
+    <Content Include="mongocrypt.dll" />
     <Content Include="Scripts\customJs\193.9f82dc70.chunk.js" />
     <Content Include="Scripts\customJs\2.bacc7828.chunk.js" />
     <Content Include="Scripts\customJs\47.94202493.chunk.js" />
@@ -146,7 +204,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-
     <Content Include="Content\css\193.4f3c47de.chunk.css" />
     <Content Include="Content\css\47.413e1e04.chunk.css" />
     <Content Include="Content\css\5.d8c2ab68.chunk.css" />
@@ -158,9 +215,7 @@
     <Content Include="Scripts\customJs\login.js" />
     <Content Include="Scripts\customJs\main.0d39ce71.chunk.js" />
     <Content Include="Content\images\MazakaPngLogo.039d2be1.png" />
-
     <Content Include="Content\Site.css" />
-
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -168,26 +223,100 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="libmongocrypt.so" />
+    <Content Include="libmongocrypt.dylib" />
+    <Content Include="Core\Compression\Zstandard\lib\osx\libzstd.dylib" />
+    <Content Include="Core\Compression\Zstandard\lib\linux\libzstd.so" />
+    <Content Include="Core\Compression\Snappy\lib\osx\libsnappy64.dylib" />
+    <Content Include="Core\Compression\Snappy\lib\linux\libsnappy64.so" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="TemplateFiles\css\animate.css" />
+    <Content Include="TemplateFiles\css\bootstrap.min.css" />
+    <Content Include="TemplateFiles\css\classy-nav.min.css" />
+    <Content Include="TemplateFiles\css\core-style.css" />
+    <Content Include="TemplateFiles\css\font-awesome.min.css" />
+    <Content Include="TemplateFiles\css\jquery-ui.min.css" />
+    <Content Include="TemplateFiles\css\magnific-popup.css" />
+    <Content Include="TemplateFiles\css\nice-select.css" />
+    <Content Include="TemplateFiles\css\owl.carousel.css" />
+    <Content Include="TemplateFiles\css\style.css" />
+    <Content Include="TemplateFiles\fonts\fontawesome-webfont.svg" />
+    <Content Include="TemplateFiles\img\bg-img\1.jpg" />
+    <Content Include="TemplateFiles\img\bg-img\2.jpg" />
+    <Content Include="TemplateFiles\img\bg-img\3.jpg" />
+    <Content Include="TemplateFiles\img\bg-img\4.jpg" />
+    <Content Include="TemplateFiles\img\bg-img\5.jpg" />
+    <Content Include="TemplateFiles\img\bg-img\6.jpg" />
+    <Content Include="TemplateFiles\img\bg-img\7.jpg" />
+    <Content Include="TemplateFiles\img\bg-img\8.jpg" />
+    <Content Include="TemplateFiles\img\bg-img\9.jpg" />
+    <Content Include="TemplateFiles\img\bg-img\cart1.jpg" />
+    <Content Include="TemplateFiles\img\bg-img\cart2.jpg" />
+    <Content Include="TemplateFiles\img\bg-img\cart3.jpg" />
+    <Content Include="TemplateFiles\img\core-img\cart.png" />
+    <Content Include="TemplateFiles\img\core-img\favicon.ico" />
+    <Content Include="TemplateFiles\img\core-img\favorites.png" />
+    <Content Include="TemplateFiles\img\core-img\logo.png" />
+    <Content Include="TemplateFiles\img\core-img\logo2.png" />
+    <Content Include="TemplateFiles\img\core-img\paypal.png" />
+    <Content Include="TemplateFiles\img\core-img\search.png" />
+    <Content Include="TemplateFiles\img\product-img\pro-big-1.jpg" />
+    <Content Include="TemplateFiles\img\product-img\pro-big-2.jpg" />
+    <Content Include="TemplateFiles\img\product-img\pro-big-3.jpg" />
+    <Content Include="TemplateFiles\img\product-img\pro-big-4.jpg" />
+    <Content Include="TemplateFiles\img\product-img\product1.jpg" />
+    <Content Include="TemplateFiles\img\product-img\product2.jpg" />
+    <Content Include="TemplateFiles\img\product-img\product3.jpg" />
+    <Content Include="TemplateFiles\img\product-img\product4.jpg" />
+    <Content Include="TemplateFiles\img\product-img\product5.jpg" />
+    <Content Include="TemplateFiles\img\product-img\product6.jpg" />
+    <Content Include="TemplateFiles\js\active.js" />
+    <Content Include="TemplateFiles\js\bootstrap.min.js" />
+    <Content Include="TemplateFiles\js\classy-nav.min.js" />
+    <Content Include="TemplateFiles\js\jquery\jquery-2.2.4.min.js" />
+    <Content Include="TemplateFiles\js\map-active.js" />
+    <Content Include="TemplateFiles\js\plugins.js" />
+    <Content Include="TemplateFiles\js\popper.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiServices\Concrete\BaseApi.cs" />
-    <Compile Include="ApiServices\Concrete\BaseApiReturn.cs" />
-    <Compile Include="ApiServices\Concrete\BaseApiV2.cs" />
     <Compile Include="ApiServices\Interface\IBaseApi.cs" />
-    <Compile Include="ApiServices\Interface\IBaseApiV2.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BidController.cs" />
+    <Compile Include="Controllers\CarBuyController.cs" />
     <Compile Include="Controllers\CarController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CarBuyAddViewModel.cs" />
+    <Compile Include="Models\CarListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\AESAlgorithm.cs" />
+    <Compile Include="ViewModels\CorporatePackageTypeAddViewModels.cs" />
+    <Compile Include="ViewModels\CorporatePackageTypeUpdateViewModels.cs" />
+    <Compile Include="ViewModels\CorporationAddViewModels.cs" />
+    <Compile Include="ViewModels\CorporationTypeAddViewModels.cs" />
+    <Compile Include="ViewModels\CorporationTypeUpdateViewModels.cs" />
+    <Compile Include="ViewModels\CorporationUpdateViewModels.cs" />
+    <Compile Include="ViewModels\CorporationUserAddViewModels.cs" />
+    <Compile Include="ViewModels\CorporationUserUpdateViewModels.cs" />
+    <Compile Include="ViewModels\ExpertInfoAddViewModels.cs" />
+    <Compile Include="ViewModels\ExpertInfoUpdateViewModels.cs" />
+    <Compile Include="ViewModels\FavoriteUserSearchesAddViewModels.cs" />
+    <Compile Include="ViewModels\FavoriteUserSearchesUpdateViewModels.cs" />
+    <Compile Include="ViewModels\NotaryFeeAddViewModels.cs" />
+    <Compile Include="ViewModels\NotaryFeeUpdateViewModels.cs" />
+    <Compile Include="ViewModels\NotificationMessageAddViewModels.cs" />
+    <Compile Include="ViewModels\NotificationMessageUpdateViewModels.cs" />
+    <Compile Include="ViewModels\NotificationMessageUserAddViewModels.cs" />
+    <Compile Include="ViewModels\NotificationMessageUserUpdateViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -218,13 +347,31 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
-
     <Content Include="Views\Default\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
-
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Car\CarDetailInformation.cshtml" />
-
+    <Content Include="Views\Bid\BidList.cshtml" />
+    <Content Include="Views\Error\Error.cshtml" />
+    <Content Include="TemplateFiles\css\core-style.css.map" />
+    <Content Include="TemplateFiles\fonts\fontawesome-webfont.eot" />
+    <Content Include="TemplateFiles\fonts\fontawesome-webfont.ttf" />
+    <Content Include="TemplateFiles\fonts\fontawesome-webfont.woff" />
+    <Content Include="TemplateFiles\fonts\fontawesome-webfont.woff2" />
+    <Content Include="TemplateFiles\fonts\FontAwesome.otf" />
+    <Content Include="TemplateFiles\fonts\helveticaneue_medium-webfont.ttf" />
+    <Content Include="TemplateFiles\fonts\helveticaneue_medium-webfont.woff" />
+    <Content Include="TemplateFiles\fonts\helveticaneue_medium-webfont.woff2" />
+    <Content Include="TemplateFiles\fonts\helvetica_neu_bold-webfont.ttf" />
+    <Content Include="TemplateFiles\fonts\helvetica_neu_bold-webfont.woff" />
+    <Content Include="TemplateFiles\fonts\helvetica_neu_bold-webfont.woff2" />
+    <Content Include="TemplateFiles\scss\style.scss" />
+    <Content Include="TemplateFiles\scss\_mixin.scss" />
+    <Content Include="TemplateFiles\scss\_responsive.scss" />
+    <Content Include="TemplateFiles\scss\_theme_color.scss" />
+    <Content Include="TemplateFiles\scss\_variables.scss" />
+    <Content Include="Views\Car\Index.cshtml" />
+    <Content Include="Views\CarBuy\Add.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -234,9 +381,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\CustomErrorHandle\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SecondHandCarBidProject.Logging\SecondHandCarBidProject.Logging.csproj">
+      <Project>{E814DDB8-5EE2-437F-B1A4-22B0C80C038F}</Project>
+      <Name>SecondHandCarBidProject.Logging</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SecondHandCarBidProject.UserUI.Dto\SecondHandCarBidProject.UserUI.Dto.csproj">
       <Project>{1bde012b-0772-48c1-80a5-df17089a0ffd}</Project>
       <Name>SecondHandCarBidProject.UserUI.Dto</Name>
@@ -272,7 +423,11 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\MongoDB.Libmongocrypt.1.5.5\build\MongoDB.Libmongocrypt.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MongoDB.Libmongocrypt.1.5.5\build\MongoDB.Libmongocrypt.targets'))" />
+    <Error Condition="!Exists('..\packages\MongoDB.Driver.Core.2.17.1\build\MongoDB.Driver.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MongoDB.Driver.Core.2.17.1\build\MongoDB.Driver.Core.targets'))" />
   </Target>
+  <Import Project="..\packages\MongoDB.Libmongocrypt.1.5.5\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.5.5\build\MongoDB.Libmongocrypt.targets')" />
+  <Import Project="..\packages\MongoDB.Driver.Core.2.17.1\build\MongoDB.Driver.Core.targets" Condition="Exists('..\packages\MongoDB.Driver.Core.2.17.1\build\MongoDB.Driver.Core.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
