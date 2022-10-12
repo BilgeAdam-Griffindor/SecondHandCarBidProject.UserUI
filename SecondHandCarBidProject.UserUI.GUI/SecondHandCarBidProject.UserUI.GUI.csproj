@@ -363,6 +363,10 @@
     <Folder Include="Views\CustomErrorHandle\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SecondHandCarBidProject.Logging\SecondHandCarBidProject.Logging.csproj">
+      <Project>{E814DDB8-5EE2-437F-B1A4-22B0C80C038F}</Project>
+      <Name>SecondHandCarBidProject.Logging</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SecondHandCarBidProject.UserUI.Dto\SecondHandCarBidProject.UserUI.Dto.csproj">
       <Project>{1bde012b-0772-48c1-80a5-df17089a0ffd}</Project>
       <Name>SecondHandCarBidProject.UserUI.Dto</Name>
