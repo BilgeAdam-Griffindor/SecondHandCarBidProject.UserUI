@@ -8,11 +8,11 @@
 <!--TODO fix style-->
 @using (Html.BeginForm("Index", "Car", FormMethod.Post))
 {
-    @Html.AntiForgeryToken()
+    @*@Html.AntiForgeryToken()*@
     <div class="row">
         <div class="col-12 col-md-4">
             <label for="brand">Araç Marka:</label>
-            @Html.DropDownListFor(x => x.BrandId, Model.BrandList, new { @class = "form-control" })
+            @Html.DropDownListFor(x => x.BrandId, Model.BrandList, new { @class = "form-control", placeholder="Seçiniz" })
             @*<select class="form-control" asp-for="BrandId" asp-items="@Model.BrandList">
             <option value="@null">Boş</option>
         </select>*@
@@ -20,7 +20,7 @@
 
         <div class="col-12 col-md-4">
             <label for="model">Araç Model:</label>
-            @Html.DropDownListFor(x => x.ModelId, Model.ModelList, new { @class = "form-control" })
+            @Html.DropDownListFor(x => x.ModelId, Model.ModelList, new { @class = "form-control", placeholder = "Seçiniz" })
             @*<select class="form-control" asp-for="ModelId" asp-items="@Model.ModelList">
                     <option value="@null">Boş</option>
                 </select>*@
@@ -28,7 +28,7 @@
 
         <div class="col-12 col-md-4">
             <label for="status">Araç Statü:</label>
-            @Html.DropDownListFor(x => x.StatusId, Model.StatusList, new { @class = "form-control" })
+            @Html.DropDownListFor(x => x.StatusId, Model.StatusList, new { @class = "form-control", placeholder = "Seçiniz" })
             @*<select class="form-control" asp-for="StatusId" asp-items="@Model.StatusList">
                     <option value="@null">Boş</option>
                 </select>*@
@@ -105,4 +105,3 @@
         </div>
     </div>
 </div>
-
