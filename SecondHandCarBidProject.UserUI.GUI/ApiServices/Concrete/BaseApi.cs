@@ -23,12 +23,13 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
             _client.BaseAddress = new Uri(ConfigurationManager.AppSettings["apiBasePath"]);
         }
 
-        public async Task<TReturn> LoginAsync<TReturn, TData>(TData postData)
+        
+        public async Task<TReturn> LoginAsync<TReturn, TData>(string loginUrl, TData postData)
         {
             var body = new StringContent(JsonConvert.SerializeObject(postData));
             body.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var response = await _client.PostAsync("Login/Authenticate", body);
+            var response = await _client.PostAsync(loginUrl, body);
 
             if (response.IsSuccessStatusCode)
             {
@@ -38,6 +39,7 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
             return default(TReturn);
         }
 
+        
         public async Task<TReturn> PostAsync<TReturn, TData>(string urlSubDirectory, TData postData, string token)
         {
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", token);
@@ -54,6 +56,7 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
             return default(TReturn);
         }
 
+        
         public async Task<TReturn> PutAsync<TReturn, TData>(string urlSubDirectory, TData putData, string token)
         {
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", token);
@@ -69,10 +72,8 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
 
             return default(TReturn);
         }
-
-
-        //TODO Check new ways for querystring
-        public async Task<TReturn> GetByFilterAsync<TReturn>(string urlSubDirectory, string token, string queryString = "", int page = 1, int perPage = 100)
+        
+        public async Task<TReturn> GetByFilterAsync<TReturn>(string urlSubDirectory, string token, string filterQueryString = "")
         {
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", token);
             string pageQueryString = "page=" + page + "&perPage=" + perPage;

@@ -1,0 +1,16 @@
+2022-10-12 02:19:31.5888|INFO|SecondHandCarBidProject.Logging.Concrete.FileLogger|{
+  "$id": "1",
+  "Id": null,
+  "LogId": 0,
+  "LogType": "asfasda",
+  "Exception": "asdasdafa",
+  "CreatedDate": "2022-10-12T02:19:31.2728082+03:00"
+}
+2022-10-12 02:21:51.5642|INFO|SecondHandCarBidProject.Logging.Concrete.FileLogger|{
+  "$id": "1",
+  "Id": null,
+  "LogId": 0,
+  "LogType": "asfasda",
+  "Exception": "asdasdafa",
+  "CreatedDate": "2022-10-12T02:21:45.8682018+03:00"
+}
