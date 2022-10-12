@@ -23,12 +23,13 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
             _client.BaseAddress = new Uri(ConfigurationManager.AppSettings["apiBasePath"]);
         }
 
-        public async Task<TReturn> LoginAsync<TReturn, TData>(TData postData)
+        
+        public async Task<TReturn> LoginAsync<TReturn, TData>(string loginUrl, TData postData)
         {
             var body = new StringContent(JsonConvert.SerializeObject(postData));
             body.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var response = await _client.PostAsync("Login/Authenticate", body);
+            var response = await _client.PostAsync(loginUrl, body);
 
             if (response.IsSuccessStatusCode)
             {
@@ -38,11 +39,12 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
             return default(TReturn);
         }
 
+        
         public async Task<TReturn> PostAsync<TReturn, TData>(string urlSubDirectory, TData postData, string token)
         {
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", token);
             var body = new StringContent(JsonConvert.SerializeObject(postData));
             body.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", token);
 
             var response = await _client.PostAsync(urlSubDirectory, body);
 
@@ -54,11 +56,12 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
             return default(TReturn);
         }
 
+        
         public async Task<TReturn> PutAsync<TReturn, TData>(string urlSubDirectory, TData putData, string token)
         {
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", token);
             var body = new StringContent(JsonConvert.SerializeObject(putData));
             body.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", token);
 
             var response = await _client.PutAsync(urlSubDirectory, body);
 
@@ -69,17 +72,14 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
 
             return default(TReturn);
         }
-
-
-        //TODO Check new ways for querystring
-        public async Task<TReturn> GetByFilterAsync<TReturn>(string urlSubDirectory, string token, string queryString = "", int page = 1, int perPage = 100)
+        
+        public async Task<TReturn> GetByFilterAsync<TReturn>(string urlSubDirectory, string token, string filterQueryString = "")
         {
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", token);
             string pageQueryString = "page=" + page + "&perPage=" + perPage;
             var fullQuery = queryString == "" ? pageQueryString : queryString + "&" + pageQueryString;
 
             var response = await _client.GetAsync(urlSubDirectory + "?" + fullQuery);
-            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", token);
-
             if (response.IsSuccessStatusCode)
             {
                 return JsonConvert.DeserializeObject<TReturn>(await response.Content.ReadAsStringAsync());
@@ -90,8 +90,8 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
 
         public async Task<TReturn> GetByIdAsync<TReturn>(string urlSubDirectory, object id, string token)
         {
-            var response = await _client.GetAsync(urlSubDirectory + "?id=" + id);
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", token);
+            var response = await _client.GetAsync(urlSubDirectory + "?id=" + id);
 
             if (response.IsSuccessStatusCode)
             {
@@ -104,8 +104,8 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
 
         public async Task<TReturn> DeleteByIdAsync<TReturn>(string urlSubDirectory, object id, string token)
         {
-            var response = await _client.DeleteAsync(urlSubDirectory + "?id=" + id);
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", token);
+            var response = await _client.DeleteAsync(urlSubDirectory + "?id=" + id);
 
             if (response.IsSuccessStatusCode)
             {

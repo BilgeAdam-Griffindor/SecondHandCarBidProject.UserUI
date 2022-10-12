@@ -106,7 +106,8 @@
                             <label class="fw-bold"><i class="fa-solid fa-camera"></i> Fotoğraf Ekle</label>
                             <br />
                             <br />
-                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                            @*<input class="form-control" type="file" id="formFileMultiple" multiple>*@
+                            @Html.TextBoxFor(model => model.files, "", new { @type = "file", @multiple = "multiple", @class = "form-control" })
 
                         </div>
                     </div>
@@ -119,6 +120,7 @@
                             <div class="form-group">
                                 <label class="fw-bold">Açıklama</label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                @Html.TextAreaFor(m => m.description, new { @class = "form-control" })
                             </div>
                         </div>
                     </div>
@@ -126,7 +128,7 @@
             </div>
             <h5>Fotoğraf Ekle</h5>
             <div class="col">
-                <div class="p-3 border bg-light" style="height:100%;">
+                <div class="p-3 border bg-light">
                     <div class="row">
                         <div class="col ">
                             @Html.ActionLink("İlan Bilgileri", "CarDetailInformation", "Car", htmlAttributes: new { @class = "btn btn-warning car-detail-button", @type = "submit" })

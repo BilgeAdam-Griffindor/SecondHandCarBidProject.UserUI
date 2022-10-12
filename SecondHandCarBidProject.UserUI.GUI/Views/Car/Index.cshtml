@@ -1,0 +1,107 @@
+﻿@using SecondHandCarBidProject.UserUI.GUI.Models
+@model CarListViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<!--TODO fix style-->
+@using (Html.BeginForm("Index", "Car", FormMethod.Post))
+{
+    @*@Html.AntiForgeryToken()*@
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <label for="brand">Araç Marka:</label>
+            @Html.DropDownListFor(x => x.BrandId, Model.BrandList, new { @class = "form-control", placeholder="Seçiniz" })
+            @*<select class="form-control" asp-for="BrandId" asp-items="@Model.BrandList">
+            <option value="@null">Boş</option>
+        </select>*@
+        </div>
+
+        <div class="col-12 col-md-4">
+            <label for="model">Araç Model:</label>
+            @Html.DropDownListFor(x => x.ModelId, Model.ModelList, new { @class = "form-control", placeholder = "Seçiniz" })
+            @*<select class="form-control" asp-for="ModelId" asp-items="@Model.ModelList">
+                    <option value="@null">Boş</option>
+                </select>*@
+        </div>
+
+        <div class="col-12 col-md-4">
+            <label for="status">Araç Statü:</label>
+            @Html.DropDownListFor(x => x.StatusId, Model.StatusList, new { @class = "form-control", placeholder = "Seçiniz" })
+            @*<select class="form-control" asp-for="StatusId" asp-items="@Model.StatusList">
+                    <option value="@null">Boş</option>
+                </select>*@
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-12">
+            <input class="btn btn-success float-right" type="submit" value="Listele" />
+        </div>
+    </div>
+}
+@*<form asp-action="Index" method="post" style="margin-top:10px;">
+</form>*@
+
+<div class="mt-2 p-3" style="box-shadow:  6px 20px 40px #000000;border-radius:10px ">
+    <div class="tooltip">
+        <h4><i class="fa-solid fa-lg fa-circle-info"></i> Araç Listesi</h4>
+        <span class="tooltiptext">Sistemdeki araçlar buradan görülebilir.</span>
+    </div>
+    @Html.ActionLink("Ekle", "Add", null, new { @class = "m-2 p-2 button-add" })
+    @*<a asp-action="Add" class="m-2 p-2 button-add"><i class="fa-solid fa-plus"></i>&nbsp;Ekle</a>*@
+
+</div>
+<div class="mt-2 p-3" style="box-shadow:  6px 20px 40px #000000;border-radius:10px ">
+    <div class="table-responsive">
+        <table class="table-bordered table-custom-css">
+            <thead class="thead color-gradient" style="color: #ffff;">
+                <tr>
+                    <th scope="col">Araç Id</th>
+                    <th scope="col">Araç Marka</th>
+                    <th scope="col">Araç Model</th>
+                    <th scope="col">Bireysel/Kurumsal</th>
+                    <th scope="col">Durum</th>
+                    <th scope="col">Kaydeden Kullanıcı</th>
+                    <th scope="col">Kaydetme Zamanı</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.TableRows)
+                {
+                    <tr>
+                        <td>@item.CarId</td>
+                        <td>@item.BrandName</td>
+                        <td>@item.ModelName</td>
+                        <td>@item.IndividualOrCorporate</td>
+                        <td>@item.Status</td>
+                        <td>@item.Username</td>
+                        <td>@item.RegisterDate</td>
+                        <td>@Html.ActionLink("GÜNCELLE", "UpdateCar", new { id = item.CarId }, new { @class = "m-2 p-2 button-gnc" })</td>
+                        <td>@Html.ActionLink("SİL", "DeleteCar", new { id = item.CarId }, new { @class = "m-2 p-2 button-delete" })</td>
+                        @*<td> <a asp-action="UpdateCar" asp-route-id="@item.CarId" class=" m-2 p-2 button-gnc"><i class="fas fa-edit"></i>&nbsp;GÜNCELLE</a></td>
+                            <td> <a asp-action="DeleteCar" asp-route-carId="@item.CarId" class=" m-2 p-2 button-delete"><i class="far fa-trash-alt"></i>&nbsp;SİL</a></td>*@
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="p-2 d-flex justify-content-center align-items-end m-2 ">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
