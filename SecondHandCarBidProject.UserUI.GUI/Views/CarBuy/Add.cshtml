@@ -24,23 +24,23 @@
         <div class="row text-center p-2">
             <div class="col-12 col-md-4 form-group">
                 <label class="fw-bold text-dark">Marka Listesi</label>
-                @Html.DropDownListFor(x => x.CarBrandId, Model.BrandList, new { @class = "form-control", placeholder="Seçiniz" })
+                @Html.DropDownListFor(x => x.CarBrandId, Model.BrandList, new { @class = "form-control", placeholder = "Seçiniz" })
                 @*<select class="form-select" asp-for="CarBrandId" asp-items="@Model.BrandList" placeholder="Seçiniz">
-                </select>*@
+                    </select>*@
             </div>
 
             <div class="col-12 col-md-4 form-group">
                 <label class="fw-bold text-dark">Model Listesi</label>
                 @Html.DropDownListFor(x => x.CarModelId, Model.ModelList, new { @class = "form-control", placeholder = "Seçiniz" })
                 @*<select class="form-select" asp-for="CarModelId" asp-items="@Model.ModelList" placeholder="Seçiniz">
-                </select>*@
+                    </select>*@
             </div>
 
             <div class="col-12 col-md-4 form-group">
                 <label class="fw-bold text-dark">Gövde Tipi</label>
                 @Html.DropDownListFor(x => x.BodyTypeId, Model.BodyTypeList, new { @class = "form-control", placeholder = "Seçiniz" })
                 @*<select class="form-select" asp-for="BodyTypeId" asp-items="@Model.BodyTypeList" placeholder="Seçiniz">
-                </select>*@
+                    </select>*@
             </div>
         </div>
 
@@ -49,21 +49,21 @@
                 <label class="fw-bold text-dark">Yakıt Tipi</label>
                 @Html.DropDownListFor(x => x.FuelTypeId, Model.FuelTypeList, new { @class = "form-control", placeholder = "Seçiniz" })
                 @*<select class="form-select" asp-for="FuelTypeId" asp-items="@Model.FuelTypeList" placeholder="Seçiniz">
-        </select>*@
+                    </select>*@
             </div>
 
             <div class="col-12 col-md-4 form-group">
                 <label class="fw-bold text-dark">Vites Tipi</label>
                 @Html.DropDownListFor(x => x.GearTypeId, Model.GearTypeList, new { @class = "form-control", placeholder = "Seçiniz" })
                 @*<select class="form-select" asp-for="GearTypeId" asp-items="@Model.GearTypeList" placeholder="Seçiniz">
-                </select>*@
+                    </select>*@
             </div>
 
             <div class="col-12 col-md-4 form-group">
                 <label class="fw-bold text-dark">Versiyon</label>
                 @Html.DropDownListFor(x => x.VersionId, Model.VersionList, new { @class = "form-control", placeholder = "Seçiniz" })
                 @*<select class="form-select" asp-for="VersionId" asp-items="@Model.VersionList" placeholder="Seçiniz">
-        </select>*@
+                    </select>*@
             </div>
         </div>
 
@@ -72,39 +72,49 @@
                 <label class="fw-bold text-dark">Renk</label>
                 @Html.DropDownListFor(x => x.ColorId, Model.ColorList, new { @class = "form-control", placeholder = "Seçiniz" })
                 @*<select class="form-select" asp-for="ColorId" asp-items="@Model.ColorList" placeholder="Seçiniz">
-        </select>*@
+                    </select>*@
             </div>
 
             <div class="col-12 col-md-4 form-group">
                 <label class="fw-bold text-dark">Araç Yılı</label>
-                <select class="form-select" asp-for="CarYear" placeholder="Seçiniz">
+                @Html.DropDownListFor(x => x.CarYear,
+               Enumerable.Range(1950, (DateTime.Now.Year - 1950 + 1)).Reverse().Select(x => new SelectListItem
+               {
+                   Text = x.ToString(),
+                   Value = x.ToString()
+               }).ToList(), new { @class = "form-control", placeholder = "Seçiniz" })
+                @*<select class="form-select" asp-for="CarYear" placeholder="Seçiniz">
                     @for (int i = DateTime.Now.Year; i > 1950; i--)
                     {
                         <option value="@i">@i</option>
                     }
-                </select>
+                </select>*@
             </div>
 
             <div class="col-12 col-md-4 form-group">
                 <label class="fw-bold text-dark">Kilometre</label>
-                <input type="text" class="form-control" asp-for="Kilometre">
+                @Html.TextBoxFor(x => x.Kilometre, new {@class="form-control"})
+                @*<input type="text" class="form-control" asp-for="Kilometre">*@
             </div>
         </div>
 
         <div class="row text-center p-2">
             <div class="col-12 col-md-4 form-group">
                 <label class="fw-bold text-dark">Opsiyonel Donanım</label>
-                <select class="form-control" multiple asp-for="OptionalHardwareIds" asp-items="@Model.OptionalHardwareList" placeholder="Seçiniz"></select>
+                @Html.DropDownListFor(x => x.OptionalHardwareIds, Model.OptionalHardwareList, new { @class = "form-control", placeholder = "Seçiniz" })
+                @*<select class="form-control" multiple asp-for="OptionalHardwareIds" asp-items="@Model.OptionalHardwareList" placeholder="Seçiniz"></select>*@
             </div>
 
             <div class="col-12 col-md-4 form-group">
                 <label class="fw-bold text-dark">Fotoğraf Ekle</label>
-                <input class="form-control" type="file" asp-for="CarImages" accept="image/png, image/jpeg" multiple>
+                @{ /*TODO Figure out a way for getting files*/}
+                <input class="form-control" type="file" name="CarImages" accept="image/png, image/jpeg" multiple>
             </div>
 
             <div class="col-12 col-md-4 form-group">
                 <label class="fw-bold text-dark">Açıklama</label>
-                <textarea class="form-control" rows="3" asp-for="CarDescription"></textarea>
+                @Html.TextAreaFor(x => x.CarDescription, new {@class="form-control", rows=3})
+                @*<textarea class="form-control" rows="3" asp-for="CarDescription"></textarea>*@
             </div>
         </div>
     }
