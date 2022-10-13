@@ -15,42 +15,37 @@ namespace SecondHandCarBidProject.UserUI.DAL
         {
             baseApi = _baseApi;
         }
-        public async Task<TReturn> LoginAsync<TReturn, TData>(TData postData)
+        public async Task<TReturn> LoginAsync<TReturn, TData>(string loginUrl, TData postData)
         {
-            var response = await baseApi.LoginAsync<TReturn, TData>(postData);
+            var response = await baseApi.LoginAsync<TReturn, TData>(loginUrl, postData);
             return response;
         }
+
+
         public async Task<TReturn> PostAsync<TReturn, TData>(string urlSubDirectory, TData postData, string token)
         {
             var response = await baseApi.PostAsync<TReturn, TData>(urlSubDirectory, postData, token);
-
             return response;
         }
+
+
         public async Task<TReturn> PutAsync<TReturn, TData>(string urlSubDirectory, TData putData, string token)
         {
-         var response = await baseApi.PutAsync<TReturn, TData>(urlSubDirectory, putData, token);
+            var response = await baseApi.PutAsync<TReturn, TData>(urlSubDirectory, putData, token) ;
             return response;
         }
 
-
-        //TODO Check new ways for querystring
-        public async Task<TReturn> GetByFilterAsync<TReturn>(string urlSubDirectory, string token, string queryString = "", int page = 1, int perPage = 100)
+        public async Task<TReturn> GetByFilterAsync<TReturn>(string urlSubDirectory, string token, string filterQueryString = "")
         {
-            var response = await baseApi.GetByFilterAsync<TReturn>(urlSubDirectory, token, queryString, page, perPage);
+            var response = await baseApi.GetByFilterAsync<TReturn>(urlSubDirectory, token, filterQueryString);
             return response;
         }
 
-        public async Task<TReturn> GetByIdAsync<TReturn>(string urlSubDirectory, object id, string token)
+        public async Task<TReturn> DeleteByFilterAsync<TReturn>(string urlSubDirectory, string token, string filterQueryString)
         {
-            var response = await baseApi.GetByIdAsync<TReturn>(urlSubDirectory, id, token);
+            var response = await baseApi.DeleteByFilterAsync<TReturn>(urlSubDirectory, token, filterQueryString);
             return response;
         }
-
-
-        public async Task<TReturn> DeleteByIdAsync<TReturn>(string urlSubDirectory, object id, string token)
-        {
-            var response = await baseApi.DeleteByIdAsync<TReturn>(urlSubDirectory, id, token);
-            return response;
-        }
+       
     }
 }
