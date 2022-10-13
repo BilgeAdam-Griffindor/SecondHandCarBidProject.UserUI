@@ -179,6 +179,10 @@
     <Content Include="Content\css\BidList.css" />
     <Content Include="Content\css\BidListTable.css" />
     <Content Include="Content\css\common.css" />
+    <Content Include="Content\css\list-buttons.css" />
+    <Content Include="Content\css\SearchBarList.css" />
+    <Content Include="Content\css\SearchList.css" />
+    <Content Include="Content\css\table-list.css" />
     <Content Include="Content\images\GryffindorLogoWhite.png" />
     <Content Include="Content\images\GryffindorLogo.png" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
@@ -212,6 +216,9 @@
     <Content Include="Content\css\main.e3b73339.chunk.css" />
     <Content Include="Scripts\customJs\5.7c737490.chunk.js" />
     <Content Include="Scripts\customJs\9.2b67ddc6.chunk.js" />
+    <Content Include="Scripts\customJs\choices.js" />
+    <Content Include="Scripts\customJs\custom-materialize.js" />
+    <Content Include="Scripts\customJs\flatpickr.js" />
     <Content Include="Scripts\customJs\login.js" />
     <Content Include="Scripts\customJs\main.0d39ce71.chunk.js" />
     <Content Include="Content\images\MazakaPngLogo.039d2be1.png" />
