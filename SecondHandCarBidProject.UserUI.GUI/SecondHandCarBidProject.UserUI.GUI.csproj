@@ -183,6 +183,8 @@
     <Content Include="Content\css\SearchBarList.css" />
     <Content Include="Content\css\SearchList.css" />
     <Content Include="Content\css\table-list.css" />
+    <Content Include="Content\images\bugatti-red.jpg" />
+    <Content Include="Content\images\bugatti.jpg" />
     <Content Include="Content\images\GryffindorLogoWhite.png" />
     <Content Include="Content\images\GryffindorLogo.png" />
     <Content Include="Content\Login\css\style.css" />
