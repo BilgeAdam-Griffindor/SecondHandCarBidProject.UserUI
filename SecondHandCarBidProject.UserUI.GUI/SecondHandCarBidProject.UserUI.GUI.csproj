@@ -294,6 +294,11 @@
     <Compile Include="ApiServices\Concrete\BaseApi.cs" />
     <Compile Include="ApiServices\Interface\IBaseApi.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CorporateController.cs" />
+    <Compile Include="Controllers\FavoriteUserSearchesController.cs" />
+    <Compile Include="Controllers\NotificationMessageUserController.cs" />
+    <Compile Include="Controllers\NotaryFeeController.cs" />
+    <Compile Include="Controllers\ExpertInfoController.cs" />
     <Compile Include="Controllers\BidController.cs" />
     <Compile Include="Controllers\CarBuyController.cs" />
     <Compile Include="Controllers\CarController.cs" />
@@ -379,6 +384,11 @@
     <Content Include="TemplateFiles\scss\_variables.scss" />
     <Content Include="Views\Car\Index.cshtml" />
     <Content Include="Views\CarBuy\Add.cshtml" />
+    <Content Include="Views\ExpertInfo\Index.cshtml" />
+    <Content Include="Views\NotaryFee\Index.cshtml" />
+    <Content Include="Views\NotificationMessageUser\Index.cshtml" />
+    <Content Include="Views\FavoriteUserSearches\Index.cshtml" />
+    <Content Include="Views\Corporation\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
