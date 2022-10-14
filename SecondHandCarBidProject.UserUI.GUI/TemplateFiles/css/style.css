@@ -1138,7 +1138,7 @@ ol {
 	font-size: 16px;
 	color: #dd2222;
 	font-weight: 700;
-	max-width: 20%;
+	/*max-width: 20%;*/
 	border: none;
 	display: inline-block;
 }
@@ -3464,5 +3464,8 @@ ol {
 	}
 	.blog__details__hero__text h2 {
 		font-size: 24px;
+	}
+	.custom-file-label::after{
+		content:"Ara";
 	}
 }

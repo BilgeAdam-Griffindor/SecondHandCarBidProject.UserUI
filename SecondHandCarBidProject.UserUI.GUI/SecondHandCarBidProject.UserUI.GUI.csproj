@@ -269,6 +269,7 @@
     <Content Include="TemplateFiles\img\cart\cart-1.jpg" />
     <Content Include="TemplateFiles\img\cart\cart-2.jpg" />
     <Content Include="TemplateFiles\img\cart\cart-3.jpg" />
+    <Content Include="TemplateFiles\img\car\astonmartin.jpg" />
     <Content Include="TemplateFiles\img\categories\cat-1.jpg" />
     <Content Include="TemplateFiles\img\categories\cat-2.jpg" />
     <Content Include="TemplateFiles\img\categories\cat-3.jpg" />
