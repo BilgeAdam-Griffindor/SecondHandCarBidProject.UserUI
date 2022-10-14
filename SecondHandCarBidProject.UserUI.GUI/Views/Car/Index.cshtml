@@ -1,82 +1,81 @@
 ﻿
-<section class="product spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-5">
-                <div class="sidebar">
-                    <div class="sidebar__item">
-                        <h4>Araç Listesi</h4>
-                        <ul>
-                            <li><a href="#">Toyota</a></li>
-                            <li><a href="#">Aston Martin</a></li>
-                            <li><a href="#">Volkswagen</a></li>
-                            <li><a href="#">BMW </a></li>
-                            <li><a href="#">Bentley</a></li>
-                            <li><a href="#">Bugatti</a></li>
-                            <li><a href="#">Maserati</a></li>
-                            <li><a href="#">Honda</a></li>
-                            <li><a href="#">Mercedes - Benz</a></li>
-                            <li><a href="#">Mazda</a></li>
-                        </ul>
-                    </div>
-                    <div class="sidebar__item">
-                        <h4>Fiyat Aralığı</h4>
-                        <div class="price-range-wrap">
-                            <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                 data-min="10" data-max="540000">
-                                <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
-                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
-                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
-                            </div>
-                            <div class="range-slider">
-                                <div class="price-input">
-                                    <label>₺</label><input type="text" id="minamount">
-                                    <br />
-                                     <label>₺</label><input type="text" id="maxamount">
-                                </div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-5">
+            <div class="sidebar">
+                <div class="sidebar__item">
+                    <h4>Araç Listesi</h4>
+                    <ul>
+                        <li><a href="#">Toyota</a></li>
+                        <li><a href="#">Aston Martin</a></li>
+                        <li><a href="#">Volkswagen</a></li>
+                        <li><a href="#">BMW </a></li>
+                        <li><a href="#">Bentley</a></li>
+                        <li><a href="#">Bugatti</a></li>
+                        <li><a href="#">Maserati</a></li>
+                        <li><a href="#">Honda</a></li>
+                        <li><a href="#">Mercedes - Benz</a></li>
+                        <li><a href="#">Mazda</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar__item">
+                    <h4>Fiyat Aralığı</h4>
+                    <div class="price-range-wrap">
+                        <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                             data-min="10" data-max="540000">
+                            <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
+                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                        </div>
+                        <div style="color:lightgray" class="range-slider">
+                            <div class="price-input">
+                                <label>₺</label><input class="form-control" disabled style="background-color:darkgray" type="text" id="minamount">
+                                <br />
+                                <label>₺</label><input class="form-control" disabled style="background-color: darkgray" type="text" id="maxamount">
                             </div>
                         </div>
                     </div>
-                    <div class="sidebar__item sidebar__item__color--option">
-                        <h4>Renkler</h4>
-                        <div class="sidebar__item__color sidebar__item__color--white">
-                            <label for="white">
-                                Beyaz
-                                <input type="radio" id="white">
-                            </label>
-                        </div>
-                        <div class="sidebar__item__color sidebar__item__color--gray">
-                            <label for="gray">
-                                Gri
-                                <input type="radio" id="gray">
-                            </label>
-                        </div>
-                        <div class="sidebar__item__color sidebar__item__color--red">
-                            <label for="red">
-                                Kırmızı
-                                <input type="radio" id="red">
-                            </label>
-                        </div>
-                        <div class="sidebar__item__color sidebar__item__color--black">
-                            <label for="black">
-                                Siyah
-                                <input type="radio" id="black">
-                            </label>
-                        </div>
-                        <div class="sidebar__item__color sidebar__item__color--blue">
-                            <label for="blue">
-                                Mavi
-                                <input type="radio" id="blue">
-                            </label>
-                        </div>
-                        <div class="sidebar__item__color sidebar__item__color--green">
-                            <label for="green">
-                                Yeşil
-                                <input type="radio" id="green">
-                            </label>
-                        </div>
+                </div>
+                <div class="sidebar__item sidebar__item__color--option">
+                    <h4>Renkler</h4>
+                    <div class="sidebar__item__color sidebar__item__color--white">
+                        <label for="white" style="color:lightgray">
+                            Siyah
+                            <input type="radio" id="white">
+                        </label>
                     </div>
-                    @*<div class="sidebar__item">
+                    <div class="sidebar__item__color sidebar__item__color--gray">
+                        <label for="gray" style="color:lightgray">
+                            Sarı
+                            <input type="radio" id="gray">
+                        </label>
+                    </div>
+                    <div class="sidebar__item__color sidebar__item__color--red">
+                        <label for="red" style="color:lightgray">
+                            Kırmızı
+                            <input type="radio" id="red">
+                        </label>
+                    </div>
+                    <div class="sidebar__item__color sidebar__item__color--black">
+                        <label for="black" style="color:lightgray">
+                            Beyaz
+                            <input type="radio" id="black">
+                        </label>
+                    </div>
+                    <div class="sidebar__item__color sidebar__item__color--blue">
+                        <label for="blue" style="color:lightgray">
+                            Mavi
+                            <input type="radio" id="blue">
+                        </label>
+                    </div>
+                    <div class="sidebar__item__color sidebar__item__color--green">
+                        <label for="green" style="color:lightgray">
+                            Yeşil
+                            <input type="radio" id="green">
+                        </label>
+                    </div>
+                </div>
+                @*<div class="sidebar__item">
                         <h4>Popular Size</h4>
                         <div class="sidebar__item__size">
                             <label for="large">
@@ -103,7 +102,7 @@
                             </label>
                         </div>
                     </div>*@
-                    @*<div class="sidebar__item">
+                @*<div class="sidebar__item">
                         <div class="latest-product__text">
                             <h4>Latest Products</h4>
                             <div class="latest-product__slider owl-carousel">
@@ -168,351 +167,357 @@
                             </div>
                         </div>
                     </div>*@
-                </div>
             </div>
-            <div class="col-lg-9 col-md-7">
-                @*<div class="product__discount">
-                        <div class="section-title product__discount__title">
-                            <h2>Sale Off</h2>
-                        </div>
-                        <div class="row">
-                            <div class="product__discount__slider owl-carousel">
-                                <div class="col-lg-4">
-                                    <div class="product__discount__item">
-                                        <div class="product__discount__item__pic set-bg"
-                                             data-setbg="img/product/discount/pd-1.jpg">
-                                            <div class="product__discount__percent">-20%</div>
-                                            <ul class="product__item__pic__hover">
-                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="product__discount__item__text">
-                                            <span>Dried Fruit</span>
-                                            <h5><a href="#">Raisin’n’nuts</a></h5>
-                                            <div class="product__item__price">$30.00 <span>$36.00</span></div>
-                                        </div>
+        </div>
+        <div class="col-lg-9 col-md-7">
+            @*<div class="product__discount">
+                    <div class="section-title product__discount__title">
+                        <h2>Sale Off</h2>
+                    </div>
+                    <div class="row">
+                        <div class="product__discount__slider owl-carousel">
+                            <div class="col-lg-4">
+                                <div class="product__discount__item">
+                                    <div class="product__discount__item__pic set-bg"
+                                         data-setbg="img/product/discount/pd-1.jpg">
+                                        <div class="product__discount__percent">-20%</div>
+                                        <ul class="product__item__pic__hover">
+                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__discount__item__text">
+                                        <span>Dried Fruit</span>
+                                        <h5><a href="#">Raisin’n’nuts</a></h5>
+                                        <div class="product__item__price">$30.00 <span>$36.00</span></div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="product__discount__item">
-                                        <div class="product__discount__item__pic set-bg"
-                                             data-setbg="img/product/discount/pd-2.jpg">
-                                            <div class="product__discount__percent">-20%</div>
-                                            <ul class="product__item__pic__hover">
-                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="product__discount__item__text">
-                                            <span>Vegetables</span>
-                                            <h5><a href="#">Vegetables’package</a></h5>
-                                            <div class="product__item__price">$30.00 <span>$36.00</span></div>
-                                        </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="product__discount__item">
+                                    <div class="product__discount__item__pic set-bg"
+                                         data-setbg="img/product/discount/pd-2.jpg">
+                                        <div class="product__discount__percent">-20%</div>
+                                        <ul class="product__item__pic__hover">
+                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__discount__item__text">
+                                        <span>Vegetables</span>
+                                        <h5><a href="#">Vegetables’package</a></h5>
+                                        <div class="product__item__price">$30.00 <span>$36.00</span></div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="product__discount__item">
-                                        <div class="product__discount__item__pic set-bg"
-                                             data-setbg="img/product/discount/pd-3.jpg">
-                                            <div class="product__discount__percent">-20%</div>
-                                            <ul class="product__item__pic__hover">
-                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="product__discount__item__text">
-                                            <span>Dried Fruit</span>
-                                            <h5><a href="#">Mixed Fruitss</a></h5>
-                                            <div class="product__item__price">$30.00 <span>$36.00</span></div>
-                                        </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="product__discount__item">
+                                    <div class="product__discount__item__pic set-bg"
+                                         data-setbg="img/product/discount/pd-3.jpg">
+                                        <div class="product__discount__percent">-20%</div>
+                                        <ul class="product__item__pic__hover">
+                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__discount__item__text">
+                                        <span>Dried Fruit</span>
+                                        <h5><a href="#">Mixed Fruitss</a></h5>
+                                        <div class="product__item__price">$30.00 <span>$36.00</span></div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="product__discount__item">
-                                        <div class="product__discount__item__pic set-bg"
-                                             data-setbg="img/product/discount/pd-4.jpg">
-                                            <div class="product__discount__percent">-20%</div>
-                                            <ul class="product__item__pic__hover">
-                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="product__discount__item__text">
-                                            <span>Dried Fruit</span>
-                                            <h5><a href="#">Raisin’n’nuts</a></h5>
-                                            <div class="product__item__price">$30.00 <span>$36.00</span></div>
-                                        </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="product__discount__item">
+                                    <div class="product__discount__item__pic set-bg"
+                                         data-setbg="img/product/discount/pd-4.jpg">
+                                        <div class="product__discount__percent">-20%</div>
+                                        <ul class="product__item__pic__hover">
+                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__discount__item__text">
+                                        <span>Dried Fruit</span>
+                                        <h5><a href="#">Raisin’n’nuts</a></h5>
+                                        <div class="product__item__price">$30.00 <span>$36.00</span></div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="product__discount__item">
-                                        <div class="product__discount__item__pic set-bg"
-                                             data-setbg="img/product/discount/pd-5.jpg">
-                                            <div class="product__discount__percent">-20%</div>
-                                            <ul class="product__item__pic__hover">
-                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="product__discount__item__text">
-                                            <span>Dried Fruit</span>
-                                            <h5><a href="#">Raisin’n’nuts</a></h5>
-                                            <div class="product__item__price">$30.00 <span>$36.00</span></div>
-                                        </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="product__discount__item">
+                                    <div class="product__discount__item__pic set-bg"
+                                         data-setbg="img/product/discount/pd-5.jpg">
+                                        <div class="product__discount__percent">-20%</div>
+                                        <ul class="product__item__pic__hover">
+                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__discount__item__text">
+                                        <span>Dried Fruit</span>
+                                        <h5><a href="#">Raisin’n’nuts</a></h5>
+                                        <div class="product__item__price">$30.00 <span>$36.00</span></div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="product__discount__item">
-                                        <div class="product__discount__item__pic set-bg"
-                                             data-setbg="img/product/discount/pd-6.jpg">
-                                            <div class="product__discount__percent">-20%</div>
-                                            <ul class="product__item__pic__hover">
-                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="product__discount__item__text">
-                                            <span>Dried Fruit</span>
-                                            <h5><a href="#">Raisin’n’nuts</a></h5>
-                                            <div class="product__item__price">$30.00 <span>$36.00</span></div>
-                                        </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="product__discount__item">
+                                    <div class="product__discount__item__pic set-bg"
+                                         data-setbg="img/product/discount/pd-6.jpg">
+                                        <div class="product__discount__percent">-20%</div>
+                                        <ul class="product__item__pic__hover">
+                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__discount__item__text">
+                                        <span>Dried Fruit</span>
+                                        <h5><a href="#">Raisin’n’nuts</a></h5>
+                                        <div class="product__item__price">$30.00 <span>$36.00</span></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>*@
-                <div class="filter__item">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-5">
-                            <div class="filter__sort">
-                                <span>Sort By</span>
+                    </div>
+                </div>*@
+            <div class="filter__item">
+                <div class="row">
+                    <div class="col-lg-4 col-md-5" >
+                        <div class="select">
                                 <select>
-                                    <option value="0">Pahalıdan Ucuza</option>
-                                    <option value="0">Ucuzdan Pahalıya</option>
+                                    <option style="color:" value="1">Sıralama Seçiniz</option>
+                                    <option value="2">Pahalıdan Ucuza</option>
+                                    <option value="3">Ucuzdan Pahalıya </option>
                                 </select>
                             </div>
+                        @*<div class="filter__sort">
+                            <span style="color: #8c0303 ">Sıralama Seçiniz</span>
+                            <select style="background-color:lightgray" class="others">
+                                <option style="color: #8c0303" value="0">Pahalıdan Ucuza</option>
+                                <option style="color: #8c0303" value="0">Ucuzdan Pahalıya</option>
+                            </select>
+                        </div>*@
+                    </div>
+                    @*<div class="col-lg-4 col-md-4">
+                        <div class="filter__found">
+                            <h6><span>16</span> Ürün Bulundu</h6>
                         </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="filter__found">
-                                <h6><span>16</span> Ürün Bulundu</h6>
-                            </div>
+                    </div>*@
+                    @*<div class="col-lg-4 col-md-3">
+                        <div class="filter__option">
+                            <span class="icon_grid-2x2"></span>
+                            <span class="icon_ul"></span>
                         </div>
-                        <div class="col-lg-4 col-md-3">
-                            <div class="filter__option">
-                                <span class="icon_grid-2x2"></span>
-                                <span class="icon_ul"></span>
-                            </div>
+                    </div>*@
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg">
+                            <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Aston Martin</a></h6>
+                            <h5>₺30000.00</h5>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Aston Martin</a></h6>
-                                <h5>₺30000.00</h5>
-                            </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg">
+                            <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                          
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Aston Martin</a></h6>
-                                <h5>₺30000.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                   
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Aston Martin</a></h6>
-                                <h5>₺30000.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Aston Martin</a></h6>
-                                <h5>₺30000.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                   
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Aston Martin</a></h6>
-                                <h5>₺30000.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                   
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Aston Martin</a></h6>
-                                <h5>₺30000.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                   
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Aston Martin</a></h6>
-                                <h5>₺30000.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Aston Martin</a></h6>
-                                <h5>₺30000.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Aston Martin</a></h6>
-                                <h5>₺30000.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Aston Martin</a></h6>
-                                <h5>₺30000.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Aston Martin</a></h6>
-                                <h5>₺30000.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Aston Martin</a></h6>
-                                <h5>₺30000.00</h5>
-                            </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Aston Martin</a></h6>
+                            <h5>₺30000.00</h5>
                         </div>
                     </div>
                 </div>
-                <div class="product__pagination">
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg">
+                            <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Aston Martin</a></h6>
+                            <h5>₺30000.00</h5>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg">
+                            <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Aston Martin</a></h6>
+                            <h5>₺30000.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg">
+                            <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Aston Martin</a></h6>
+                            <h5>₺30000.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg">
+                            <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Aston Martin</a></h6>
+                            <h5>₺30000.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg">
+                            <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Aston Martin</a></h6>
+                            <h5>₺30000.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg">
+                            <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Aston Martin</a></h6>
+                            <h5>₺30000.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg">
+                            <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Aston Martin</a></h6>
+                            <h5>₺30000.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg">
+                            <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Aston Martin</a></h6>
+                            <h5>₺30000.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg">
+                            <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Aston Martin</a></h6>
+                            <h5>₺30000.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg">
+                            <a href="./cardetailinsformation.html"><img src="~/TemplateFiles/img/car/astonmartin.jpg" alt=""></a>
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Aston Martin</a></h6>
+                            <h5>₺30000.00</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product__pagination">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#"><i class="fa fa-long-arrow-right"></i></a>
             </div>
         </div>
     </div>
-</section>
+</div>
