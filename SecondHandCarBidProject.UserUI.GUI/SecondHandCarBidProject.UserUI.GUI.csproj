@@ -370,6 +370,7 @@
     <Content Include="TemplateFiles\css\owl.carousel.min.css" />
     <Content Include="TemplateFiles\css\slicknav.min.css" />
     <Content Include="TemplateFiles\css\select-carindex.css" />
+    <Content Include="TemplateFiles\css\still.css" />
     <Content Include="TemplateFiles\css\style.css" />
     <Content Include="TemplateFiles\css\style-dark.css" />
     <Content Include="TemplateFiles\fonts\ElegantIcons.svg" />

@@ -9,15 +9,11 @@ using System.Threading.Tasks;
 
 namespace SecondHandCarBidProject.Logging.Concrete
 {
-    public class MongoDatabaseLog : ILoggerExtension
+    public class MongoDatabaseLog<T> : ILoggerExtension<T> where T:class
     {
-        MongoLog mongoLog;
-        public MongoDatabaseLog()
-        {
-             mongoLog = new MongoLog();
-            
-        }
-        public Task DataLog(LogModel data)
+        MongoLog<T> mongoLog = new MongoLog<T>();
+        
+        public Task DataLog(T data)
         {
             return mongoLog.AddLogToMongo(data);
         }

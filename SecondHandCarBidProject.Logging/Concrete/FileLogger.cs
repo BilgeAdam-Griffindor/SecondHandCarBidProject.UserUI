@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace SecondHandCarBidProject.Logging.Concrete
 {
-    public class FileLogger : ILoggerExtension
+    public class FileLogger<T> : ILoggerExtension<T> where T : class
     {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         public FileLogger()
         {
             LogConfig logConfig = new LogConfig();
         }
-        public Task DataLog(LogModel data)
+        public Task DataLog(T data)
         {
             string message = null;
             try
