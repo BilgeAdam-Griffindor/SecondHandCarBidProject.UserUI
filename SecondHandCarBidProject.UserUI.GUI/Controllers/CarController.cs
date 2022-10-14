@@ -1,13 +1,9 @@
-﻿using SecondHandCarBidProject.Logging.Concrete;
-using SecondHandCarBidProject.Logging.LogModels;
-using SecondHandCarBidProject.UserUI.Dto;
+﻿using SecondHandCarBidProject.UserUI.Dto;
 using SecondHandCarBidProject.UserUI.Dto.CarDtos;
 using SecondHandCarBidProject.UserUI.GUI.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 
 
@@ -124,11 +120,16 @@ namespace SecondHandCarBidProject.UserUI.GUI.Controllers
             //await log.FactoryMethod(LoggerFactoryMethod.LoggerType.FileLogger, logModel);
             CarDetailDto carDetailDto = new CarDetailDto();
             carDetailDto.selectItemList = new List<SelectListItem> { new SelectListItem { Text = "Bireysel", Value = "1" }, new SelectListItem { Text = "Kurumsal", Value = "2" } };
-            
+
             return View(carDetailDto);
         }
         [HttpPost]
         public ActionResult CarDetailInformation(CarDetailDto dto)
+        {
+            return View();
+        }
+        [HttpGet]
+        public ActionResult ShopDetails()
         {
             return View();
         }

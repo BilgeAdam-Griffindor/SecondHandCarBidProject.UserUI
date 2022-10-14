@@ -381,6 +381,7 @@
     <Content Include="TemplateFiles\img\featured\audi4.jpg" />
     <Content Include="TemplateFiles\img\featured\bmw1.jpg" />
     <Content Include="TemplateFiles\img\featured\bmw2.jpg" />
+    <Content Include="TemplateFiles\img\featured\bugatti-background.jpg" />
     <Content Include="TemplateFiles\img\featured\bugtti1.jpg" />
     <Content Include="TemplateFiles\img\featured\bugtti2.jpg" />
     <Content Include="TemplateFiles\img\featured\bugtti3.jpg" />
@@ -550,6 +551,7 @@
     <Content Include="TemplateFiles\sass\_variable.scss" />
     <Content Include="Views\Login\LogIn.cshtml" />
     <Content Include="Views\Login\Register.cshtml" />
+    <Content Include="Views\Car\ShopDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
