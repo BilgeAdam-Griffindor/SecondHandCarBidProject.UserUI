@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="~/TemplateFiles/css/owl.carousel.min.css">
     <link rel="stylesheet" href="~/TemplateFiles/css/slicknav.min.css">
     <link rel="stylesheet" href="~/TemplateFiles/css/style-dark.css">
+    <link rel="stylesheet" href="~/TemplateFiles/css/still.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     @RenderSection("Stylesheets", false)
 
 
@@ -41,7 +44,7 @@
     <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
-        <div class="humberger__menu__logo">
+        <div class="humberger__menu__logo ">
             <a href="#"><img src="~/Content/images/newLogo.png" width="70%" alt=""></a>
         </div>
         <div class="humberger__menu__cart">
@@ -62,7 +65,7 @@
             </ul>
         </div>*@
             <div class="header__top__right__auth">
-                <a href="#"><i class="fa fa-user"></i> Giriş</a>
+                <a href="/Login/Login"><i class="fa fa-user " target="_blank"></i> Giriş</a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
@@ -126,9 +129,12 @@
                                     <li><a href="#">English</a></li>
                                 </ul>
                             </div>*@
-                            <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Giriş</a>
-                            </div>
+                        <div class="header__top__right__auth p-2">
+                            <a href="/Login/Login" target="_blank"><i class="fa fa-sign-in" ></i> Giriş</a>
+                        </div>
+                            <div class="header__top__right__auth p-2">
+                            <a href="/Login/Register" target="_blank"><i class="fa fa-user" ></i> Kayıt Ol</a>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -137,7 +143,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="header__logo">
+                    <div class="header__logo text-center  animate__animated animate__backInLeft">
                         <a href="#"><img src="~/Content/images/newLogo.png" width="70%" alt=""></a>
                     </div>
                 </div>
@@ -180,7 +186,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="hero__categories">
+                    <div class="hero__categories" style="background: #8c0303;">
                         <div class="hero__categories__all">
                             <i class="fa fa-bars"></i>
                             <span>İşlemler</span>
@@ -216,7 +222,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero__item set-bg" data-setbg="../../Content/images/bugatti-red.jpg">
+                    <div class="hero__item set-bg" class="img-fluid" data-setbg="../../Content/images/bugatti-red.jpg">
                         <div class="hero__text">
                             <span>Gryffindor</span>
                             <h2>Dünyanın <br />En İyi</h2>

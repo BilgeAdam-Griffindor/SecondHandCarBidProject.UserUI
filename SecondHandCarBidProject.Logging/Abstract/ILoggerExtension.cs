@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace SecondHandCarBidProject.Logging.Abstract
 {
-    public interface ILoggerExtension
+    public interface ILoggerExtension<T>
     {
-        Task DataLog(LogModel data);
+        Task DataLog(T data);
     }
 }
