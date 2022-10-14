@@ -53,14 +53,14 @@
         </div>
         <div class="humberger__menu__widget">
             @*<div class="header__top__right__language">
-                <img src="~/TemplateFiles/img/language.png" alt="">
-                <div>English</div>
-                <span class="arrow_carrot-down"></span>
-                <ul>
-                    <li><a href="#">Spanis</a></li>
-                    <li><a href="#">English</a></li>
-                </ul>
-            </div>*@
+            <img src="~/TemplateFiles/img/language.png" alt="">
+            <div>English</div>
+            <span class="arrow_carrot-down"></span>
+            <ul>
+                <li><a href="#">Spanis</a></li>
+                <li><a href="#">English</a></li>
+            </ul>
+        </div>*@
             <div class="header__top__right__auth">
                 <a href="#"><i class="fa fa-user"></i> Giriş</a>
             </div>
@@ -72,7 +72,7 @@
                 <li>
                     <a href="#">Sayfalar</a>
                     <ul class="header__menu__dropdown">
-                        <li><a href="#">Alışveriş Detayları</a></li>
+                        <li>@Html.ActionLink("Alışveriş Detayları", "ShopDetails", "Car")</li>
                         <li><a href="#">Teklif Verdiklerim</a></li>
                         <li><a href="#">Hemen Al</a></li>
                     </ul>
