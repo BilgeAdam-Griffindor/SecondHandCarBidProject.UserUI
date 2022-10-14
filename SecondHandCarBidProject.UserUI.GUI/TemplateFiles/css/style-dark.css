@@ -1155,14 +1155,14 @@ ol {
 	content: "";
 }
 
-.price-range-wrap .range-slider .price-input input {
-	font-size: 16px;
-	color: #dd2222;
-	font-weight: 700;
-	max-width: 20%;
-	border: none;
-	display: inline-block;
-}
+	.price-range-wrap .range-slider .price-input input {
+		font-size: 16px;
+		color: #8c0303;
+		font-weight: 700;
+		max-width: 100%;
+		border: none;
+		display: inline-block;
+	}
 
 .price-range-wrap .price-range {
 	border-radius: 0;
@@ -1191,9 +1191,9 @@ ol {
 	border-radius: 0;
 }
 
-.price-range-wrap .price-range .ui-slider-range.ui-corner-all.ui-widget-header:last-child {
-	background: #dd2222;
-}
+	.price-range-wrap .price-range .ui-slider-range.ui-corner-all.ui-widget-header:last-child {
+		background: #8c0303;
+	}
 
 .sidebar__item__color {
 	float: left;
