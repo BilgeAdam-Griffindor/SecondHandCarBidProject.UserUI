@@ -187,6 +187,7 @@
     <Content Include="Content\images\bugatti.jpg" />
     <Content Include="Content\images\GryffindorLogoWhite.png" />
     <Content Include="Content\images\GryffindorLogo.png" />
+    <Content Include="Content\images\newLogo.png" />
     <Content Include="Content\Login\css\style.css" />
     <Content Include="Content\Login\fonts\material-icon\css\material-design-iconic-font.css" />
     <Content Include="Content\Login\fonts\material-icon\css\material-design-iconic-font.min.css" />
