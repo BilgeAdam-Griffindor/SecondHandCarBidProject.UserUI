@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SecondHandCarBidProject.UserUI.Dto.DTOs.UserDtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,7 +15,18 @@ namespace SecondHandCarBidProject.UserUI.GUI.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult LogIn(UserLoginDTO loginData)
+        {
+            return View();
+        }
+        [HttpGet]
         public ActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Register(RegisterDTO registerData)
         {
             return View();
         }
