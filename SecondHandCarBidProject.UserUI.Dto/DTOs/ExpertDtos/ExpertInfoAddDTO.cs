@@ -13,7 +13,6 @@ namespace SecondHandCarBidProject.UserUI.Dto.DTOs.ExpertDtos
         public decimal? Longitude { get; set; }
         public decimal? Latitude { get; set; }
         public byte[]/*?*/ Picture { get; set; }
-        public byte IsActive { get; set; }
         public string/*?*/ ExpertAddress { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
