@@ -98,3 +98,4 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
         }
     }
 }
+

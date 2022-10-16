@@ -9,6 +9,5 @@ namespace SecondHandCarBidProject.UserUI.Dto.DTOs.CorporationDtos
     public class CorporationTypeAddDTO
     {
         public string CorporationTypeName { get; set; }
-        public byte IsActive { get; set; }
     }
 }
