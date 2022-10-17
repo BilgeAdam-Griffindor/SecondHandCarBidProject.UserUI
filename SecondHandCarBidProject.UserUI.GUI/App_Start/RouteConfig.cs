@@ -12,7 +12,7 @@ namespace SecondHandCarBidProject.UserUI.GUI
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Default", action = "Login", id = UrlParameter.Optional }
+                defaults: new { controller = "Login", action = "LogIn", id = UrlParameter.Optional }
             );
         }
     }
