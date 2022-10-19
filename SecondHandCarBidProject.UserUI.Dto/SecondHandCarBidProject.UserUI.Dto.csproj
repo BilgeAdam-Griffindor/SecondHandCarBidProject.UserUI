@@ -68,6 +68,7 @@
     <Compile Include="CarDtos\CarListTableRowDTO.cs" />
     <Compile Include="DTOs\AdditionalFeeDtos\NotaryFeeAddDTO.cs" />
     <Compile Include="DTOs\AdditionalFeeDtos\NotaryFeeUpdateDTO.cs" />
+    <Compile Include="DTOs\BidAddSendDTO.cs" />
     <Compile Include="DTOs\BidDTO.cs" />
     <Compile Include="DTOs\BidSearchDTO.cs" />
     <Compile Include="DTOs\CorporationDtos\CorporatePackageTypeAddDTO.cs" />
