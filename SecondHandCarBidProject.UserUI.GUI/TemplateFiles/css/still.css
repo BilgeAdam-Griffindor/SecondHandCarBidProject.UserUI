@@ -26,3 +26,65 @@ div.slider-product {
     box-shadow: 10px -5px 30px indianred;
     padding: 20px;
 }
+div.custom-file{
+
+}@import url(https://fonts.googleapis.com/css?family=Exo+2:400,700,500,300);
+
+
+@import url(https://fonts.googleapis.com/css?family=Exo+2:400,700,500,300);
+
+.zone {
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #8c0303;
+    width: 80%;
+    height: 50%;
+    border: 5px dashed white;
+    text-align: center;
+    color: white;
+    z-index: 20;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
+}
+
+
+.selectFile {
+    height: 50px;
+    margin: 20px auto;
+    position: relative;
+    width: 200px;
+}
+
+.zone.in {
+    color: white;
+    border-color: white;
+    background: radial-gradient(ellipse at center, #eb6a5a 0, #c9402f 100%);
+    color: #fff;
+}
+.zone.hover {
+    color: gray;
+    border-color: white;
+    background: #fff;
+    border: 5px dashed gray;   
+    color: #eb6a5a;
+}
+
+
+.zone.fade {
+    transition: all 0.3s ease-out;
+    opacity: 1;
+}
+
+
+textarea {
+    font-size: .8rem;
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
