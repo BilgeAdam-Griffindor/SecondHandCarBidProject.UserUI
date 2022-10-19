@@ -461,7 +461,7 @@
     <Compile Include="ApiServices\Concrete\BaseApi.cs" />
     <Compile Include="ApiServices\Interface\IBaseApi.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Content\GetOfferController.cs" />
+    <Compile Include="Controllers\GetOfferController.cs" />
     <Compile Include="Controllers\CorporateController.cs" />
     <Compile Include="Controllers\FavoriteUserSearchesController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -473,6 +473,7 @@
     <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Extensions\SessionExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
