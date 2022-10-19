@@ -5,6 +5,7 @@ namespace SecondHandCarBidProject.UserUI.GUI.Controllers
     public class DefaultController : Controller
     {
         // GET: Default
+        [HttpGet]
         public ActionResult Index()
         {
             return View();

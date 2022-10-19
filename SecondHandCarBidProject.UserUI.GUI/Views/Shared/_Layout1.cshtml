@@ -198,7 +198,7 @@
                             <li><a href="#">İlanlar</a></li>
                             <li><a href="#">Yeni İlan Ver</a></li>
                             <li><a href="#">İhale Aç</a></li>
-                            <li><a href="#">Teklif Al</a></li>
+                            <li><a href="/GetOffer/Index">Teklif Al</a></li>
                         </ul>
                     </div>
                 </div>
@@ -224,14 +224,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero__item set-bg" class="img-fluid" data-setbg="../../Content/images/bugatti-red.jpg">
-                        <div class="hero__text">
-                            <span>Gryffindor</span>
-                            <h2>Dünyanın <br />En İyi</h2>
-                            <p>Araç Satış Platformuna Hoşgeldiniz</p>
-                            @*<a href="#" class="primary-btn">SHOP NOW</a>*@
+                    @if (ViewContext.RouteData.Values["Controller"].ToString().ToUpper()=="DEFAULT" &&
+                        ViewContext.RouteData.Values["Action"].ToString().ToUpper() == "INDEX")
+                    {
+                        <div class="hero__item set-bg" class="img-fluid" data-setbg="../../Content/images/bugatti-red.jpg">
+                            <div class="hero__text">
+                                <span>Gryffindor</span>
+                                <h2>Dünyanın <br />En İyi</h2>
+                                <p>Araç Satış Platformuna Hoşgeldiniz</p>
+                                @*<a href="#" class="primary-btn">SHOP NOW</a>*@
+                            </div>
                         </div>
-                    </div>
+                    }
+
                 </div>
             </div>
         </div>
