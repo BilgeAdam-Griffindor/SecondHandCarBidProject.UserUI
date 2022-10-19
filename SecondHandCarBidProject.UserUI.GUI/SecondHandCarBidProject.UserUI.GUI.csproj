@@ -476,6 +476,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BidAddModel.cs" />
     <Compile Include="Models\CarBuyAddViewModel.cs" />
     <Compile Include="Models\CarListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -572,6 +573,7 @@
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Views\Car\ShopDetails.cshtml" />
     <Content Include="Views\GetOffer\Index.cshtml" />
+    <Content Include="Views\Bid\Add.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
