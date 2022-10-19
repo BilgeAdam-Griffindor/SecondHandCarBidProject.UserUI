@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "ContactUs";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<div class="site-section " style="background-color: #8c0303">
+    <div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('images/img_4.jpg');">
+        <div class="container">
+            <br />
+            <div class="row same-height justify-content-center">
+                <div class="col-md-12 col-lg-10">
+                    <div class="post-entry text-center">
+                        <h2 class="">İletişim</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 mb-5">
+
+                <form action="#" class="p-5 bg">
+
+
+                    <div class="row form-group">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <label class="text-black" for="fname">Ad</label>
+                            <input type="text" id="fname" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-black" for="lname">Soyad</label>
+                            <input type="text" id="lname" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+
+                        <div class="col-md-12">
+                            <label class="text-black" for="email">Email</label>
+                            <input type="email" id="email" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+
+                        <div class="col-md-12">
+                            <label class="text-black" for="subject">Konu</label>
+                            <input type="subject" id="subject" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-black" for="message">Mesajınız</label>
+                            <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Lütfen soru ve mesajlarınızı buraya yazınız..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <input type="submit" value="Mesaj Gönder" class="btn btn-secondary py-2 px-4 text-white">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
