@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<div class="container pb-3 pb-3 ">
+    <h1 class="text-center animate__animated animate__wobble animate__repeat-2">Teklif Al</h1>
+    <div class="row text-center justify-content-center p-">
+        <div class="col-12 col-md-5 m-2 p-2 featured__item ">
+            <div class="form-group">
+                <select class="custom-select" id="BrandId" placeholder="Araç Marka">
+                    <option selected>Lütfen Marka Seçiniz....</option>
+                    <option>BMW</option>
+                    <option>Wolswagen</option>
+                    <option>Mercedes</option>
+                    <option>Ford</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="custom-select" id="ModelId" placeholder="Araç Model">
+                    <option selected>Lütfen Model Seçiniz....</option>
+                    <option>İ8</option>
+                    <option>Passat</option>
+                    <option>CL200</option>
+                    <option>Tornero</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="custom-select" id="BodyTypeId" placeholder="Gövde Tipi">
+                    <option selected>Lütfen Gövde Tipi Seçiniz....</option>
+                    <option>Sedan</option>
+                    <option>Picup</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="custom-select" id="YearId" placeholder="Yıl">
+                    <option selected>Lütfen Araç Yılınızı Seçiniz....</option>
+                    <option>2000</option>
+                    <option>20010</option>
+                    <option>2015</option>
+                    <option>2020</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="custom-select" id="GearId" placeholder="Vites Tipi">
+                    <option selected>Lütfen Vites Tipi Seçiniz....</option>
+                    <option>Otomatik</option>
+                    <option>Manuel</option>
+                    <option>Yarı Otomatik</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="custom-select" id="GasId" placeholder="Yakıt Tipi">
+                    <option selected>Lütfen Yakıt Tipi Seçiniz....</option>
+                    <option>Dizel</option>
+                    <option>Benzin</option>
+                    <option>LPG</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="custom-select" id="ColorId" placeholder="Renk">
+                    <option selected>Lütfen Renk Seçiniz....</option>
+                    <option>Beyaz</option>
+                    <option>Gri</option>
+                    <option>Siyah</option>
+                    <option>Kırmızı</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="custom-select" id="VersionId" placeholder="Versiyon">
+                    <option selected>Lütfen Versiyon Seçiniz....</option>
+                    <option>Full + Full</option>
+                    <option>Yarı Full</option>
+                    <option>Boş</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="Lütfen Kilometre Bilgisi Giriniz..." />
+            </div>
+        </div>
+        <div class="col-12 col-md-5 m-2 p-2 featured__item">
+            <div class="zone">
+                <div id="dropZ">
+                    <i class="fa fa-cloud-upload"></i>
+                    <div>Lütfen Fotoğraflarınızı Yükleyiniz</div>
+                    <div class="selectFile">
+                        <label for="file">Dosya Seç</label>
+                        <input class="file" type="file" name="files" id="file" multiple>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <div>
+                    <label>Açıklama Giriniz:</label>
+                </div>
+                <div>
+                    <textarea rows="5" cols="60" placeholder="Lütfen Açıklama Giriniz:"></textarea>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="col-5 text-center justify-content-center featured__item" >
+            <div>
+                <button class="btn" style="background-color: #8c0303;color:white">Hasar Tramer Bilgileri</button>
+                <button class="btn btn-dark">Teklif Al</button>
+            </div>
+        </div>
+    </div>
+</div>
