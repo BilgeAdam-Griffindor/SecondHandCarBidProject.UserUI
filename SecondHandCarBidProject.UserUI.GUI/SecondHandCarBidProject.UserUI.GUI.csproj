@@ -379,6 +379,7 @@
     <Content Include="TemplateFiles\img\cart\cart-1.jpg" />
     <Content Include="TemplateFiles\img\cart\cart-2.jpg" />
     <Content Include="TemplateFiles\img\cart\cart-3.jpg" />
+    <Content Include="TemplateFiles\img\contact.jpg" />
     <Content Include="TemplateFiles\img\featured\audi1.jpg" />
     <Content Include="TemplateFiles\img\featured\audi2.jpg" />
     <Content Include="TemplateFiles\img\featured\audi3.jpg" />
