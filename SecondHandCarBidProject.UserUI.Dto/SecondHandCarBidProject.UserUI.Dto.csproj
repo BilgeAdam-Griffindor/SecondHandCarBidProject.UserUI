@@ -81,6 +81,8 @@
     <Compile Include="DTOs\CorporationDtos\CorporationUserUpdateDTO.cs" />
     <Compile Include="DTOs\ExpertDtos\ExpertInfoAddDTO.cs" />
     <Compile Include="DTOs\ExpertDtos\ExpertInfoUpdateDTO.cs" />
+    <Compile Include="DTOs\NavbarDtos\AboutAddDTO.cs" />
+    <Compile Include="DTOs\NavbarDtos\AboutUpdateDTO.cs" />
     <Compile Include="DTOs\NotificationDtos\NotificationMessageAddDTO.cs" />
     <Compile Include="DTOs\NotificationDtos\NotificationMessageUpdateDTO.cs" />
     <Compile Include="DTOs\NotificationDtos\NotificationMessageUserAddDTO.cs" />
