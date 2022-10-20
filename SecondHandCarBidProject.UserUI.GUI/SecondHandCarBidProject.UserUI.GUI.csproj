@@ -461,6 +461,7 @@
     <Compile Include="ApiServices\Concrete\BaseApi.cs" />
     <Compile Include="ApiServices\Interface\IBaseApi.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdvertController.cs" />
     <Compile Include="Controllers\GetOfferController.cs" />
     <Compile Include="Controllers\CorporateController.cs" />
     <Compile Include="Controllers\FavoriteUserSearchesController.cs" />
@@ -573,6 +574,7 @@
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Views\Car\ShopDetails.cshtml" />
     <Content Include="Views\GetOffer\Index.cshtml" />
+    <Content Include="Views\Advert\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
