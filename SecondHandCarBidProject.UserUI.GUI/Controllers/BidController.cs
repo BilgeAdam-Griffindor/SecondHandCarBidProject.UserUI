@@ -1,11 +1,23 @@
 ﻿using SecondHandCarBidProject.UserUI.Dto.DTOs;
+using SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete;
+using SecondHandCarBidProject.UserUI.GUI.ApiServices.Interface;
+using SecondHandCarBidProject.UserUI.GUI.Models;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace SecondHandCarBidProject.UserUI.GUI.Controllers
 {
     public class BidController : Controller
     {
+        IBaseApi _baseApi;
+        public BidController()
+        {
+            _baseApi = new BaseApi();
+        }
+
         // GET: Bid
         //  BaseApi baseApi = new BaseApi();
         public ActionResult Index()
@@ -30,6 +42,145 @@ namespace SecondHandCarBidProject.UserUI.GUI.Controllers
         public ActionResult BidList(BidSearchDTO bidListDTO)
         {
             return View();
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> Add()
+        {
+            try
+            {
+                //ResponseModel<BidAddPageDTO> responseModel = await _baseApi.GetByFilterAsync<ResponseModel<BidAddPageDTO>>("Bid/Add", Session["userToken"].ToString());
+
+                ResponseModel<BidAddPageDTO> responseModel = new ResponseModel<BidAddPageDTO>();
+                responseModel.IsSuccess = true;
+
+                if (responseModel.IsSuccess)
+                {
+                    //BidAddModel bidAddModel = new BidAddModel()
+                    //{
+                    //    CorporationList = responseModel.Data.CorporationList.Select(x => new SelectListItem()
+                    //    {
+                    //        Value = x.Id.ToString(),
+                    //        Text = x.Name
+                    //    }).ToList(),
+                    //    StatusList = responseModel.Data.StatusList.Select(x => new SelectListItem()
+                    //    {
+                    //        Value = x.Id.ToString(),
+                    //        Text = x.Name
+                    //    }).ToList(),
+                    //    CarList = responseModel.Data.CarList.Select(x => new SelectListItem()
+                    //    {
+                    //        Value = x.Id.ToString(),
+                    //        Text = x.Name
+                    //    }).ToList()
+                    //};
+
+                    BidAddModel bidAddModel = new BidAddModel()
+                    {
+                        CorporationList = new List<SelectListItem>()
+                        {
+                            new SelectListItem()
+                            {
+                                Value="23",
+                                Text = "Corp 1"
+                            },
+                            new SelectListItem()
+                            {
+                                Value="2343",
+                                Text = "Corp 2"
+                            },
+                            new SelectListItem()
+                            {
+                                Value="2353",
+                                Text = "Corp 3"
+                            }
+                        },
+                        StatusList = new List<SelectListItem>()
+                        {
+                            new SelectListItem()
+                            {
+                                Value="23",
+                                Text = "Stat 1"
+                            },
+                            new SelectListItem()
+                            {
+                                Value="2343",
+                                Text = "Stat 2"
+                            },
+                            new SelectListItem()
+                            {
+                                Value="2353",
+                                Text = "Stat 3"
+                            }
+                        },
+                        CarList = new List<SelectListItem>()
+                        {
+                            new SelectListItem()
+                            {
+                                Value= Guid.NewGuid().ToString(),
+                                Text = "Car 1"
+                            },
+                            new SelectListItem()
+                            {
+                                Value=Guid.NewGuid().ToString(),
+                                Text = "Car 2"
+                            },
+                            new SelectListItem()
+                            {
+                                Value=Guid.NewGuid().ToString(),
+                                Text = "Car 3"
+                            }
+                        }
+                    };
+
+                    return View(bidAddModel);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Error");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return RedirectToAction("Index", "Error");
+            }
+        }
+
+        [ValidateAntiForgeryToken]
+        //[Authorize]
+        [HttpPost]
+        public async Task<ActionResult> Add(BidAddModel model)
+        {
+            try
+            {
+                BidAddSendDTO sendDTO = new BidAddSendDTO()
+                {
+                    BidName = model.BidName,
+                    IsCorporate = model.IsCorporate,
+                    CorporationId = model.CorporationId,
+                    StatusId = model.StatusId,
+                    StartDate = model.StartDate,
+                    EndDate = model.EndDate,
+                    CarIds = model.CarIds
+                };
+
+                ResponseModel<bool> responseModel = await _baseApi.PostAsync<ResponseModel<bool>, BidAddSendDTO>("Bid/Add", sendDTO, Session["userToken"].ToString());
+
+                if (responseModel.IsSuccess)
+                {
+                    return RedirectToAction("Add");
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Error");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return RedirectToAction("Index", "Error");
+            }
         }
     }
 }

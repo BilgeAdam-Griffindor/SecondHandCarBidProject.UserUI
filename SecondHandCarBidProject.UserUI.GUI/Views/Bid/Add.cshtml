@@ -1,0 +1,87 @@
+﻿@using SecondHandCarBidProject.UserUI.GUI.Models
+@model BidAddModel
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+
+    List<SelectListItem> isCorporateList = new List<SelectListItem>()
+{
+        new SelectListItem()
+        {
+             Value = "false",
+             Text = "Bireysel"
+        },
+        new SelectListItem()
+        {
+             Value = "true",
+             Text = "Kurumsal"
+        }
+    };
+}
+
+<div class="container pb-3 pb-3 ">
+    <h1 class="text-center animate__animated animate__wobble animate__repeat-2">İhale Ekle</h1>
+    @using (Html.BeginForm("Add", "Bid", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="row text-center justify-content-center p-">
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(x => x.BidName, "İhale Adı Giriniz")
+                    @Html.TextBoxFor(x => x.BidName)
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(x => x.BidName, "Bireysel/Kurumsal Seçiniz")
+                    @Html.DropDownListFor(x => x.IsCorporate, isCorporateList)
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(x => x.BidName, "Şirket Seçiniz")
+                    @Html.DropDownListFor(x => x.CorporationId, Model.CorporationList)
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center justify-content-center p-">
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(x => x.BidName, "Durum Seçiniz")
+                    @Html.DropDownListFor(x => x.StatusId, Model.StatusList, new { placeholder = "İhale Adı Giriniz..." })
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(x => x.StartDate, "Başlangıç Tarihi Seçiniz")
+                    <input type="datetime-local" name="StartDate" />
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(x => x.EndDate, "Bitiş Tarihi Seçiniz")
+                    <input type="datetime-local" name="EndDate" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center justify-content-center p-">
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(x => x.CarIds, "İhaleye Eklenecek Araçları Seçiniz")
+                    @Html.DropDownListFor(x => x.CarIds, Model.CarList, new { multiple = true })
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-dark" value="Kaydet" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
