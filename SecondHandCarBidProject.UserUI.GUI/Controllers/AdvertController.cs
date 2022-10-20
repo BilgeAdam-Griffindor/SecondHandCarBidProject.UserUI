@@ -1,4 +1,6 @@
-﻿namespace SecondHandCarBidProject.UserUI.GUI.Controllers
+﻿using System.Web.Mvc;
+
+namespace SecondHandCarBidProject.UserUI.GUI.Controllers
 {
     public class AdvertController : Controller
     {
