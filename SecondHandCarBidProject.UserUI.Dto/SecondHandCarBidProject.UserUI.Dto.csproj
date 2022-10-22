@@ -70,6 +70,7 @@
     <Compile Include="DTOs\AdditionalFeeDtos\NotaryFeeUpdateDTO.cs" />
     <Compile Include="DTOs\BidAddSendDTO.cs" />
     <Compile Include="DTOs\BidDTO.cs" />
+    <Compile Include="DTOs\BidDtos\BidListDto.cs" />
     <Compile Include="DTOs\BidSearchDTO.cs" />
     <Compile Include="DTOs\CorporationDtos\CorporatePackageTypeAddDTO.cs" />
     <Compile Include="DTOs\CorporationDtos\CorporatePackageTypeUpdateDTO.cs" />

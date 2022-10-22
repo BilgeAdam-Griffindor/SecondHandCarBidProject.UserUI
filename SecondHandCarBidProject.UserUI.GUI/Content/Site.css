@@ -380,3 +380,12 @@ a.button-add {
         color: #ffff;
         transform: translateY(2px);
     }
+
+
+.dot {
+    height: 15px !important;
+    width: 15px !important;
+    background-color: #dd2222 !important;
+    border-radius: 50% !important;
+    display: inherit !important;
+}
