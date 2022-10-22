@@ -369,6 +369,7 @@
     <Content Include="TemplateFiles\img\cart\cart-1.jpg" />
     <Content Include="TemplateFiles\img\cart\cart-2.jpg" />
     <Content Include="TemplateFiles\img\cart\cart-3.jpg" />
+    <Content Include="TemplateFiles\img\contact.jpg" />
     <Content Include="TemplateFiles\img\featured\audi1.jpg" />
     <Content Include="TemplateFiles\img\featured\audi2.jpg" />
     <Content Include="TemplateFiles\img\featured\audi3.jpg" />
@@ -451,6 +452,7 @@
     <Compile Include="ApiServices\Concrete\BaseApi.cs" />
     <Compile Include="ApiServices\Interface\IBaseApi.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdvertController.cs" />
     <Compile Include="Controllers\GetOfferController.cs" />
     <Compile Include="Controllers\AdvertController.cs" />
     <Compile Include="Controllers\NavbarController.cs" />
