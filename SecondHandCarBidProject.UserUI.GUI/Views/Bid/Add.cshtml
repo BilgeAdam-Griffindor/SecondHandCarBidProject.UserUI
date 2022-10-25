@@ -28,21 +28,21 @@
             <div class="col-12 col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(x => x.BidName, "İhale Adı Giriniz")
-                    @Html.TextBoxFor(x => x.BidName)
+                    @Html.TextBoxFor(x => x.BidName, new {@class = "form-control"})
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(x => x.BidName, "Bireysel/Kurumsal Seçiniz")
-                    @Html.DropDownListFor(x => x.IsCorporate, isCorporateList)
+                    @Html.DropDownListFor(x => x.IsCorporate, isCorporateList, new {@class = "custom-select"})
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(x => x.BidName, "Şirket Seçiniz")
-                    @Html.DropDownListFor(x => x.CorporationId, Model.CorporationList)
+                    @Html.DropDownListFor(x => x.CorporationId, Model.CorporationList, new { @class = "custom-select" })
                 </div>
             </div>
         </div>
@@ -51,32 +51,33 @@
             <div class="col-12 col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(x => x.BidName, "Durum Seçiniz")
-                    @Html.DropDownListFor(x => x.StatusId, Model.StatusList, new { placeholder = "İhale Adı Giriniz..." })
+                    @Html.DropDownListFor(x => x.StatusId, Model.StatusList, new { @class = "custom-select" })
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(x => x.StartDate, "Başlangıç Tarihi Seçiniz")
-                    <input type="datetime-local" name="StartDate" />
+                    <input type="datetime-local" name="StartDate" class="form-control" />
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(x => x.EndDate, "Bitiş Tarihi Seçiniz")
-                    <input type="datetime-local" name="EndDate" />
+                    <input type="datetime-local" name="EndDate" class="form-control" />
                 </div>
             </div>
         </div>
 
-        <div class="row text-center justify-content-center p-">
-            <div class="col-12 col-md-4">
+        <div class="row text-center justify-content-center p- align-items-center">
+            <div class="col-12 col-md-8">
                 <div class="form-group">
                     @Html.LabelFor(x => x.CarIds, "İhaleye Eklenecek Araçları Seçiniz")
-                    @Html.DropDownListFor(x => x.CarIds, Model.CarList, new { multiple = true })
+                    @Html.DropDownListFor(x => x.CarIds, Model.CarList, new { multiple = true, @class = "custom-select" })
                 </div>
             </div>
+
             <div class="col-12 col-md-4">
                 <div class="form-group">
                     <input type="submit" class="btn btn-dark" value="Kaydet" />
