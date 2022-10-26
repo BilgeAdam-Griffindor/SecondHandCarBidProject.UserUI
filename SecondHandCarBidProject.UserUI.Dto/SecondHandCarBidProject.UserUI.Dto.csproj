@@ -89,9 +89,11 @@
     <Compile Include="DTOs\NotificationDtos\NotificationMessageUserAddDTO.cs" />
     <Compile Include="DTOs\NotificationDtos\NotificationMessageUserUpdateDTO.cs" />
     <Compile Include="DTOs\ResponseModel.cs" />
+    <Compile Include="DTOs\UserDtos\BaseUserDTO.cs" />
     <Compile Include="DTOs\UserDtos\FavoriteUserSearchesAddDTO.cs" />
     <Compile Include="DTOs\UserDtos\FavoriteUserSearchesUpdateDTO.cs" />
     <Compile Include="DTOs\UserDtos\RegisterDTO.cs" />
+    <Compile Include="DTOs\UserDtos\TokenUserRequestDTO.cs" />
     <Compile Include="DTOs\UserDtos\UserLoginDTO.cs" />
     <Compile Include="DTOs\UserDtos\UserResponseDTO.cs" />
     <Compile Include="ExampleDTO.cs" />
