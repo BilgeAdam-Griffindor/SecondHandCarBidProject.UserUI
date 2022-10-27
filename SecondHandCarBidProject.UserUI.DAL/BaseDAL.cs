@@ -1,10 +1,5 @@
-﻿using SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SecondHandCarBidProject.UserUI.Dto.DTOs;
+using SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete;
 
 namespace SecondHandCarBidProject.UserUI.DAL
 {
@@ -15,7 +10,7 @@ namespace SecondHandCarBidProject.UserUI.DAL
         {
             baseApi = _baseApi;
         }
-        public async Task<TReturn> LoginAsync<TReturn, TData>(string loginUrl, TData postData)
+        public async Task<ResponseModel<TReturn>> LoginAsync<TReturn, TData>(string loginUrl, TData postData)
         {
             var response = await baseApi.LoginAsync<TReturn, TData>(loginUrl, postData);
             return response;
@@ -31,7 +26,7 @@ namespace SecondHandCarBidProject.UserUI.DAL
 
         public async Task<TReturn> PutAsync<TReturn, TData>(string urlSubDirectory, TData putData, string token)
         {
-            var response = await baseApi.PutAsync<TReturn, TData>(urlSubDirectory, putData, token) ;
+            var response = await baseApi.PutAsync<TReturn, TData>(urlSubDirectory, putData, token);
             return response;
         }
 
@@ -46,6 +41,6 @@ namespace SecondHandCarBidProject.UserUI.DAL
             var response = await baseApi.DeleteByFilterAsync<TReturn>(urlSubDirectory, token, filterQueryString);
             return response;
         }
-       
+
     }
 }

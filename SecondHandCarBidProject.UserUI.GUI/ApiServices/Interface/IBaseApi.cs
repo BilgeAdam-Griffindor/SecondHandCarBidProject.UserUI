@@ -14,7 +14,8 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Interface
         /// <param name="postData">Login information. Will the added to the body of the request.</param>
         /// <returns>TReturn or Default of TReturn if the response was not successful.</returns>
         Task<ResponseModel<TReturn>> LoginAsync<TReturn, TData>(string loginUrl, TData postData);
-
+        Task<ResponseModel<TReturn>> RegisterAsync<TReturn, TData>(string loginUrl, TData postData);
+        Task<ResponseModel<TReturn>> GetAddressRegisterAsync<TReturn>(string loginUrl);
         /// <summary>
         /// For post operations.
         /// </summary>

@@ -68,6 +68,7 @@
     <Compile Include="CarDtos\CarListTableRowDTO.cs" />
     <Compile Include="DTOs\AdditionalFeeDtos\NotaryFeeAddDTO.cs" />
     <Compile Include="DTOs\AdditionalFeeDtos\NotaryFeeUpdateDTO.cs" />
+    <Compile Include="DTOs\AddressInfoDTOs\AddressInfoListDTO.cs" />
     <Compile Include="DTOs\BidAddSendDTO.cs" />
     <Compile Include="DTOs\BidDTO.cs" />
     <Compile Include="DTOs\BidDtos\BidListDto.cs" />
@@ -89,6 +90,8 @@
     <Compile Include="DTOs\NotificationDtos\NotificationMessageUserAddDTO.cs" />
     <Compile Include="DTOs\NotificationDtos\NotificationMessageUserUpdateDTO.cs" />
     <Compile Include="DTOs\ResponseModel.cs" />
+    <Compile Include="DTOs\UserDtos\BaseUserAddDTO.cs" />
+    <Compile Include="DTOs\UserDtos\BaseUserAddPageDTO.cs" />
     <Compile Include="DTOs\UserDtos\BaseUserDTO.cs" />
     <Compile Include="DTOs\UserDtos\FavoriteUserSearchesAddDTO.cs" />
     <Compile Include="DTOs\UserDtos\FavoriteUserSearchesUpdateDTO.cs" />
