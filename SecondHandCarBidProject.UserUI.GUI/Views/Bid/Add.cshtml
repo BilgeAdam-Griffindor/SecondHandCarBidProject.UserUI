@@ -28,30 +28,7 @@
             <div class="col-12 col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(x => x.BidName, "İhale Adı Giriniz")
-                    @Html.TextBoxFor(x => x.BidName, new {@class = "form-control"})
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="form-group">
-                    @Html.LabelFor(x => x.BidName, "Bireysel/Kurumsal Seçiniz")
-                    @Html.DropDownListFor(x => x.IsCorporate, isCorporateList, new {@class = "custom-select"})
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="form-group">
-                    @Html.LabelFor(x => x.BidName, "Şirket Seçiniz")
-                    @Html.DropDownListFor(x => x.CorporationId, Model.CorporationList, new { @class = "custom-select" })
-                </div>
-            </div>
-        </div>
-
-        <div class="row text-center justify-content-center p-">
-            <div class="col-12 col-md-4">
-                <div class="form-group">
-                    @Html.LabelFor(x => x.BidName, "Durum Seçiniz")
-                    @Html.DropDownListFor(x => x.StatusId, Model.StatusList, new { @class = "custom-select" })
+                    @Html.TextBoxFor(x => x.BidName, new { @class = "form-control" })
                 </div>
             </div>
 
