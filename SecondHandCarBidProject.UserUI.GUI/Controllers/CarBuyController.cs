@@ -12,6 +12,7 @@ namespace SecondHandCarBidProject.UserUI.GUI.Controllers
         // GET: CarBuy
         public ActionResult Index()
         {
+
             return View();
         }
 

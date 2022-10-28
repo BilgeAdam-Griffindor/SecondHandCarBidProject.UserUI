@@ -11,9 +11,9 @@
     <!--<link rel="stylesheet" href="~/TemplateFiles/css/core-style.css">
     <link rel="stylesheet" href="~/TemplateFiles/css/style.css">-->
     <!---->
-    <!--<link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
 
-    <link href="~/Content/css/common.css" rel="stylesheet" />-->
+    <link href="~/Content/css/common.css" rel="stylesheet" />
     <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
 
     <!-- Google Font -->
@@ -28,8 +28,9 @@
     <link rel="stylesheet" href="~/TemplateFiles/css/slicknav.min.css">
     <link rel="stylesheet" href="~/TemplateFiles/css/style-dark.css">
     <link rel="stylesheet" href="~/TemplateFiles/css/still.css" />
+   
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="~/TemplateFiles/css/select-carindex.css" rel="stylesheet" />
     @RenderSection("Stylesheets", false)
 
@@ -66,7 +67,7 @@
             </ul>
         </div>*@
             <div class="header__top__right__auth">
-                <a href="/Login/Login"><i class="fa fa-user " target="_blank"></i> Giriş</a>
+                <a href="/Login/LogIn"><i class="fa fa-user "></i> Giriş</a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
@@ -131,7 +132,7 @@
                                 </ul>
                             </div>*@
                         <div class="header__top__right__auth p-2">
-                            <a href="/Login/Login" target="_blank"><i class="fa fa-sign-in" ></i> Giriş</a>
+                            <a href="/Login/LogIn" target="_blank"><i class="fa fa-sign-in" ></i> Giriş</a>
                         </div>
                             <div class="header__top__right__auth p-2">
                             <a href="/Login/Register" target="_blank"><i class="fa fa-user" ></i> Kayıt Ol</a>
@@ -193,7 +194,7 @@
                             <span>İşlemler</span>
                         </div>
                         <ul>
-                            <li><a href="#">İhaleler</a></li>
+                            <li><a href="/Bid/Index">İhaleler</a></li>
                             <li><a href="/Advert/Index">İlanlar</a></li>
                             <li><a href="#">Yeni İlan Ver</a></li>
                             <li><a href="/Bid/Add">İhale Aç</a></li>
@@ -226,7 +227,7 @@
                     @if (ViewContext.RouteData.Values["Controller"].ToString().ToUpper()=="DEFAULT" &&
                             ViewContext.RouteData.Values["Action"].ToString().ToUpper() == "INDEX") 
                     {
-                        <div class="hero__item set-bg" class="img-fluid" data-setbg="../../Content/images/bugatti-red.jpg">
+                        <div class="hero__item set-bg img-fluid" data-setbg="../../Content/images/bugatti-red.jpg">
                             <div class="hero__text">
                                 <span>Gryffindor</span>
                                 <h2>Dünyanın <br />En İyi</h2>

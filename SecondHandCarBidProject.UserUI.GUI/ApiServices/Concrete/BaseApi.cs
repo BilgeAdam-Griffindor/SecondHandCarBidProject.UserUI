@@ -1,9 +1,11 @@
 ﻿using Newtonsoft.Json;
+using SecondHandCarBidProject.UserUI.Dto.DTOs;
 using SecondHandCarBidProject.UserUI.GUI.ApiServices.Interface;
 using System;
 using System.Configuration;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
@@ -19,19 +21,19 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
         }
 
 
-        public async Task<TReturn> LoginAsync<TReturn, TData>(string loginUrl, TData postData)
+        public async Task<ResponseModel<TReturn>> LoginAsync<TReturn, TData>(string loginUrl, TData postData)
         {
             var body = new StringContent(JsonConvert.SerializeObject(postData));
             body.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-
-            var response = await _client.PostAsync(loginUrl, body);
+            var content = new StringContent(JsonConvert.SerializeObject(postData), Encoding.UTF8, "application/json");
+            var response = _client.PostAsync(loginUrl, content).Result;
 
             if (response.IsSuccessStatusCode)
             {
-                return JsonConvert.DeserializeObject<TReturn>(await response.Content.ReadAsStringAsync());
+                return JsonConvert.DeserializeObject<ResponseModel<TReturn>>(await response.Content.ReadAsStringAsync());
             }
 
-            return default(TReturn);
+            return default(ResponseModel<TReturn>);
         }
 
 
@@ -95,6 +97,33 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Concrete
                 return JsonConvert.DeserializeObject<TReturn>(await response.Content.ReadAsStringAsync());
             }
             return default(TReturn);
+        }
+
+        public async Task<ResponseModel<TReturn>> GetAddressRegisterAsync<TReturn>(string loginUrl)
+        {
+            var response = await _client.GetAsync(loginUrl);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return JsonConvert.DeserializeObject<ResponseModel<TReturn>>(await response.Content.ReadAsStringAsync());
+            }
+
+            return default(ResponseModel<TReturn>);
+        }
+
+        public async Task<ResponseModel<TReturn>> RegisterAsync<TReturn, TData>(string loginUrl, TData postData)
+        {
+            var body = new StringContent(JsonConvert.SerializeObject(postData));
+            body.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            var content = new StringContent(JsonConvert.SerializeObject(postData), Encoding.UTF8, "application/json");
+            var response = _client.PostAsync(loginUrl, content).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                return JsonConvert.DeserializeObject<ResponseModel<TReturn>>(await response.Content.ReadAsStringAsync());
+            }
+
+            return default(ResponseModel<TReturn>);
         }
     }
 }

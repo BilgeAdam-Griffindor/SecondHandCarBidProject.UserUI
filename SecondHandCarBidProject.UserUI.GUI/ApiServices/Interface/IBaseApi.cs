@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using SecondHandCarBidProject.UserUI.Dto.DTOs;
 using System.Threading.Tasks;
 
 namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Interface
@@ -16,8 +13,9 @@ namespace SecondHandCarBidProject.UserUI.GUI.ApiServices.Interface
         /// <param name="loginUrl">Subdirectory part of the full login url. Will be added to "apiBasePath" from settings.</param>
         /// <param name="postData">Login information. Will the added to the body of the request.</param>
         /// <returns>TReturn or Default of TReturn if the response was not successful.</returns>
-        Task<TReturn> LoginAsync<TReturn, TData>(string loginUrl, TData postData);
-
+        Task<ResponseModel<TReturn>> LoginAsync<TReturn, TData>(string loginUrl, TData postData);
+        Task<ResponseModel<TReturn>> RegisterAsync<TReturn, TData>(string loginUrl, TData postData);
+        Task<ResponseModel<TReturn>> GetAddressRegisterAsync<TReturn>(string loginUrl);
         /// <summary>
         /// For post operations.
         /// </summary>
