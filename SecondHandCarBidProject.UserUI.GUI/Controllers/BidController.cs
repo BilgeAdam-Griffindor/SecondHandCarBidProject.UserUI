@@ -49,88 +49,22 @@ namespace SecondHandCarBidProject.UserUI.GUI.Controllers
         {
             try
             {
-                //ResponseModel<BidAddPageDTO> responseModel = await _baseApi.GetByFilterAsync<ResponseModel<BidAddPageDTO>>("Bid/Add", Session["userToken"].ToString());
+                string isCorp = "false";
+                if (Session["userCorporationId"] != null)
+                    isCorp = "true";
 
-                ResponseModel<BidAddPageDTO> responseModel = new ResponseModel<BidAddPageDTO>();
-                responseModel.IsSuccess = true;
+                var query = "userId=" + Session["currentUserId"].ToString() + "&isCorporate=" + isCorp;
+                ResponseModel<BidAddPageUserDTO> responseModel = await _baseApi.GetByFilterAsync<ResponseModel<BidAddPageUserDTO>>("Bid/AddGetUser", Session["userToken"].ToString());
 
-                if (responseModel.IsSuccess)
+                if (responseModel != null && responseModel.IsSuccess)
                 {
-                    //BidAddModel bidAddModel = new BidAddModel()
-                    //{
-                    //    CorporationList = responseModel.Data.CorporationList.Select(x => new SelectListItem()
-                    //    {
-                    //        Value = x.Id.ToString(),
-                    //        Text = x.Name
-                    //    }).ToList(),
-                    //    StatusList = responseModel.Data.StatusList.Select(x => new SelectListItem()
-                    //    {
-                    //        Value = x.Id.ToString(),
-                    //        Text = x.Name
-                    //    }).ToList(),
-                    //    CarList = responseModel.Data.CarList.Select(x => new SelectListItem()
-                    //    {
-                    //        Value = x.Id.ToString(),
-                    //        Text = x.Name
-                    //    }).ToList()
-                    //};
-
                     BidAddModel bidAddModel = new BidAddModel()
                     {
-                        CorporationList = new List<SelectListItem>()
+                        CarList = responseModel.Data.CarList.Select(x => new SelectListItem()
                         {
-                            new SelectListItem()
-                            {
-                                Value="23",
-                                Text = "Corp 1"
-                            },
-                            new SelectListItem()
-                            {
-                                Value="2343",
-                                Text = "Corp 2"
-                            },
-                            new SelectListItem()
-                            {
-                                Value="2353",
-                                Text = "Corp 3"
-                            }
-                        },
-                        StatusList = new List<SelectListItem>()
-                        {
-                            new SelectListItem()
-                            {
-                                Value="23",
-                                Text = "Stat 1"
-                            },
-                            new SelectListItem()
-                            {
-                                Value="2343",
-                                Text = "Stat 2"
-                            },
-                            new SelectListItem()
-                            {
-                                Value="2353",
-                                Text = "Stat 3"
-                            }
-                        },
-                        CarList = new List<SelectListItem>()
-                        {
-                            new SelectListItem()
-                            {
-                                Value= Guid.NewGuid().ToString(),
-                                Text = "Car 1"
-                            },
-                            new SelectListItem()
-                            {
-                                Value=Guid.NewGuid().ToString(),
-                                Text = "Car 2"
-                            },
-                            new SelectListItem()
-                            {
-                                Value=Guid.NewGuid().ToString(),
-                                Text = "Car 3"
-                            }
-                        }
+                            Value = x.Id.ToString(),
+                            Text = x.Name
+                        }).ToList()
                     };
 
                     return View(bidAddModel);
@@ -154,18 +88,21 @@ namespace SecondHandCarBidProject.UserUI.GUI.Controllers
         {
             try
             {
-                BidAddSendDTO sendDTO = new BidAddSendDTO()
+                int? corpId = null;
+                if (Session["userCorporationId"] != null)
+                    corpId = Convert.ToInt32(Session["userCorporationId"]);
+
+                BidAddSendUserDTO sendDTO = new BidAddSendUserDTO()
                 {
                     BidName = model.BidName,
-                    IsCorporate = model.IsCorporate,
-                    CorporationId = model.CorporationId,
-                    StatusId = model.StatusId,
+                    CorporationId = corpId,
                     StartDate = model.StartDate,
                     EndDate = model.EndDate,
-                    CarIds = model.CarIds
+                    CarIds = model.CarIds,
+                    CreatedBy = new Guid(Session["currentUserId"].ToString())
                 };
 
-                ResponseModel<bool> responseModel = await _baseApi.PostAsync<ResponseModel<bool>, BidAddSendDTO>("Bid/Add", sendDTO, Session["userToken"].ToString());
+                ResponseModel<bool> responseModel = await _baseApi.PostAsync<ResponseModel<bool>, BidAddSendUserDTO>("Bid/AddPostUser", sendDTO, "token");
 
                 if (responseModel.IsSuccess)
                 {
